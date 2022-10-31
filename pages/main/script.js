@@ -34,7 +34,38 @@ let petsArr = [{
     "native": "Native to Antarctica",
     "meal": "../../assets/logo/meet-fish_icon.svg"
   },
+  
+]
 
+let testimonials = [
+  {
+    "author": "Michael John ",
+    "place": "Local Austria",
+    "day": "Today",
+    "photo": "../../assets/img/author.svg",
+    "comment": "The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals."
+  },
+  {
+    "author": "Oskar Samborsky",
+    "place": "Local Austria",
+    "day": "Yesterday",
+    "photo": "../../assets/img/samborsky.jpg",
+    "comment": "Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for "
+  },
+  {
+    "author": "Fredericka Michelin",
+    "place": "Local Austria",
+    "day": "Yesterday",
+    "photo": "../../assets/img/michelin.jpg",
+    "comment": "The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met.The best online zoo I’ve met. My son delighted very much ljves to "
+  },
+  {
+    "author": "Mila Riksha",
+    "place": "Local Austria",
+    "day": "Yesterday",
+    "photo": "../../assets/img/riksha.jpg",
+    "comment": "My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf "
+  },
 
 ]
 function showCards(){
@@ -52,8 +83,7 @@ function showCards(){
     let petCardHeader = document.createElement("h3");
     petCardHeader.textContent = el.name;
     let petCardNative = document.createElement("h6");
-    petCardNative.textContent = el.native;    
-    // petCard.appendChild(petCardHeader);
+    petCardNative.textContent = el.native;
     petCardContent.appendChild(petCardHeader);
     petCardContent.appendChild(petCardNative);
     petCard.appendChild(petCardContent);
@@ -64,9 +94,42 @@ function showCards(){
     petCard.appendChild(meal);
     petCards.appendChild(petCard);
 })
-
 }
 
+function showTestimonials(){
+  
+  let testimonialsWrapper = document.querySelector(".testimonials-wrapper");
+  console.log(testimonialsWrapper)
+  
+  testimonials.forEach(el => {
+    let testimonialBlock = document.createElement("div");
+    testimonialBlock.classList.add("testimonial");
+    let testimonialAuthorPhoto = document.createElement("img");
+    testimonialAuthorPhoto.classList.add("testimonial-author-photo");
+    testimonialAuthorPhoto.setAttribute("src", el.photo);
+    testimonialAuthorPhoto.setAttribute("alt", "author");
+    let testimonialAuthor = document.createElement("h3");
+    testimonialAuthor.classList.add("testimonial-author");
+    testimonialAuthor.textContent = el.author;
+    let testimonialAuthorData = document.createElement("h5");
+    testimonialAuthorData.classList.add("testimonial-author-data");
+    testimonialAuthorData.textContent = el.place + " • " + el.day;
+    let testimonialContent = document.createElement("p");
+    testimonialContent.classList.add("testimonial-content");
+    testimonialContent.textContent = el.comment;
+    testimonialBlock.appendChild(testimonialAuthorPhoto);
+    testimonialBlock.appendChild(testimonialAuthor);
+    testimonialBlock.appendChild(testimonialAuthorData);
+    testimonialBlock.appendChild(testimonialContent);
+    testimonialsWrapper.appendChild(testimonialBlock);
+  })
+
+}
+document.querySelectorAll(".nav-list-item-link").forEach(el=>
+  el.addEventListener("click", function(){
+    document.querySelector(".nav-list-item-link-active").classList.remove("nav-list-item-link-active");
+    el.classList.add("nav-list-item-link-active");
+  }))
 
 window.addEventListener('DOMContentLoaded', showCards)
-console.log("lll")
+window.addEventListener('DOMContentLoaded', showTestimonials)

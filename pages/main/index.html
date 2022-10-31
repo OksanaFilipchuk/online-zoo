@@ -11,53 +11,145 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="first-block">
-      <header class = "header">
-          <div class="container header-container">              
-            <nav class="nav">
-              <a href="#"><img src="../../assets/img/logo_footer.png" alt="logo"></a>
-              <ul class="nav-list">
-                <li class="nav-list-item"><a href="#" class="nav-list-item-link nav-list-item-link-active">About</a></li>
-                <li class="nav-list-item"><a href="#" class="nav-list-item-link">Map</a></li>
-                <li class="nav-list-item"><a href="#" class="nav-list-item-link">Zoos</a></li>
-                <li class="nav-list-item"><a href="#" class="nav-list-item-link">Donate</a></li>
-                <li class="nav-list-item"><a href="#" class="nav-list-item-link">Contact us</a></li>
-              </ul>
-            </nav>              
-            <span class="designed">Designed by ©</span>
-          </div>
-      </header>
-      <div class="container watch-your">
-        <div class="first-block-header-wrapper">
-          <div class="circle"></div>
-          <h1 class="first-block-header">Watch your <span class="first-block-header-colored">favorite</span> animal online</h1>
-          
+  <div class="first-block">
+    <header class = "header">
+        <div class="container header-container">              
+          <nav class="nav">
+            <a href="index.html"><h1 class="petStory-logo">PetStory online</h1></a>
+            <ul class="nav-list">
+              <li class="nav-list-item"><a href="index.html" class="nav-list-item-link nav-list-item-link-active">About</a></li>
+              <li class="nav-list-item"><a href="#" class="nav-list-item-link">Map</a></li>
+              <li class="nav-list-item"><a href="#zoos" class="nav-list-item-link">Zoos</a></li>
+              <li class="nav-list-item"><a href="../donate/index.html" class="nav-list-item-link">Donate</a></li>
+              <li class="nav-list-item"><a href="#footer" class="nav-list-item-link">Contact us</a></li>
+            </ul>
+          </nav>              
+          <span ><a href = "https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks" class="designed">Designed by ©</a></span>
         </div>
-        <button class="watch-your-button">Watch online</button>         
+    </header>
+    <div class="container watch-your">
+      <div class="first-block-header-wrapper">
+        <div class="circle"></div>
+        <div class="first-block-header">
+          Watch your <span class="first-block-header-colored">favorite</span> animal online
+          <button class="button button-centred">Watch online</button>
+        </div>
+      </div>                
+    </div>
+  </div>
+  <div class="backstage">
+    <div class="container backstage-container">
+      <img src="../../assets/img/bamboo-cap.jpg" alt="bamboo-cap" class="backstage-img">
+      <div class="backstage-content">
+        <h2 class="backstage-header">The Backstage of the Wilderness World.</h2>
+        <p class="backstage-paragraph">The site was founded on the basis of a volunteer movement to protect and care for animals.</p>
+        <h3>How it works </h3>
+        <p class="backstage-paragraph">The main goal is to help the animals, as well as the nature reserves and zoos where they are kept. We are currently working on video projects targeting pandas in China, eagles on an island near Los Angeles, alligators in Florida and gorillas in the Congo. These have a total of more than 1,500 mammals and reptiles.</p>
       </div>
     </div>
-    <div class="backstage">
-      <div class="container backstage-container">
-        <img src="../../assets/img/bamboo-cap.jpg" alt="bamboo-cap" class="backstage-img">
-        <div class="backstage-content">
-          <h2 class="backstage-header">The Backstage of the Wilderness World.</h2>
-          <p class="backstage-paragraph">The site was founded on the basis of a volunteer movement to protect and care for animals.</p>
-          <h3>How it works </h3>
-          <p class="backstage-paragraph">The main goal is to help the animals, as well as the nature reserves and zoos where they are kept. We are currently working on video projects targeting pandas in China, eagles on an island near Los Angeles, alligators in Florida and gorillas in the Congo. These have a total of more than 1,500 mammals and reptiles.</p>
+  </div>
+  <div class="pets" id = "zoos">
+    <div class="pets-carousel">
+      <div class="pets-carousel-button">
+        <img src="../../assets/img/Vector-r.svg" alt="previous">
+      </div>
+      <div class="container pet-cards"></div>
+      <div class="pets-carousel-button">
+        <img src="../../assets/img/Vector-l.svg" alt="next">
+      </div>        
+    </div>
+    <button class="button button-centred">choose your favorite</button>
+  </div>
+  <div class="pick-friend" id = "donate">
+    <div class="container pick-friend-content">
+      <h3 class="pick-friend-content-header">Pick and feed a friend</h3>
+      <p class="pick-friend-content-paragraph1">We know the animals bring you joy, and in these extraordinary times, we’re glad.</p>
+      <p class="pick-friend-content-paragraph2">During a time when the COVID-19 epidemic is touching all of our lives, we’re proud and glad that people around the world find joy in PetStory.</p>
+      <p class="pick-friend-content-paragraph3">Even though the zoo has reopened, we need you now more than ever to help us deal with these problems. Please consider a gift to our <span class="underlined">Emergency Support Fund</span> .</p>
+      <h4 class="how-it-work-header">How it works</h4>
+      <div class="how-it-work-block">
+        <div class="how-it-work-action">
+          <div class="how-it-work-action-pay"></div>
+          <p class="how-it-work-action-descript">Pay with card</p>
+        </div>
+        <img src="../../assets/img/Vector-arrow.svg" alt="">
+        <div class="how-it-work-action">
+          <div class="how-it-work-action-zoo"></div>
+          <p class="how-it-work-action-descript">Payment goes to the zoo</p>
+        </div>
+        <img src="../../assets/img/Vector-arrow.svg" alt="">
+        <div class="how-it-work-action">
+          <div class="how-it-work-action-dish"></div>
+          <p class="how-it-work-action-descript">Your favourite animal gets delicious dish</p>
         </div>
       </div>
+      <button class="button button-centred">Feed a friend now</button>
     </div>
-    <div class="pets">
-      <div class="pets-carousel">
-        <div class="pets-carousel-button">
-          <img src="../../assets/img/Vector-r.svg">
-        </div>
-        <div class="container pet-cards"></div>
-        <div class="pets-carousel-button">
-          <img src="../../assets/img/Vector-l.svg">
+  </div>
+  <div class="testimonials">
+    <div class="container">
+      <h3 class="testimonials-header">Testimonials</h3>
+      <div class="testimonials-wrapper">    
+      </div>
+      <div class="slider-track">
+        <div class="slider-thumb"></div>            
+      </div>
+      <button class="button button-left">leave feedback</button>
+    </div>    
+  </div>
+  <footer class = "footer" id="footer">
+    <div class="container">
+      <div class = "footer-line1">
+        <a href="#"><img src="../../assets/img/logo_footer.png" alt="logo"></a>
+        <div class = "subscribe">
+          <h4 class="subscribe-header">Subscribe to our news</h4>
+          <input type="text" class="subscribe-input" placeholder="Enter your email">
+          <input type="submit" class="subscribe-submit">
         </div>
       </div>
+      <button class="button button-left">donate for volunteers</button>
+      <div class = "footer-line2">
+        <ul class = "social-media">
+          <li class = "social-media-item">
+            <div class="social-media-img-background">
+              <img src="../../assets/img/facebook.svg" class="social-media-img" alt="Facebook">
+            </div>
+            <a href = "https://www.facebook.com/" class = "social-media-link">Facebook</a>
+          </li>
+          <li class = "social-media-item">
+            <div class="social-media-img-background">
+              <img src="../../assets/img/twitter.svg" class="social-media-img" alt="Twitter">
+            </div>
+            <a href = "https://twitter.com/" class = "social-media-link">Twitter</a>
+          </li>
+          <li class = "social-media-item">
+            <div class="social-media-img-background">
+              <img src="../../assets/img/instagram.svg" class="social-media-img" alt="Instagram">
+            </div>
+            <a href = "https://www.instagram.com/" class = "social-media-link">Instagram</a>
+          </li>
+          <li class = "social-media-item">
+            <div class="social-media-img-background">
+              <img src="../../assets/img/youtube.svg" class="social-media-img" alt="Youtube">
+            </div>
+            <a href = "https://www.youtube.com/" class = "social-media-link">Youtube</a>
+          </li>
+        </ul>
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-list-item"><a href="#" class="nav-list-item-link nav-list-item-link-active">About</a></li>
+            <li class="nav-list-item"><a href="#" class="nav-list-item-link">Map</a></li>
+            <li class="nav-list-item"><a href="#zoos" class="nav-list-item-link">Zoos</a></li>
+            <li class="nav-list-item"><a href="#footer" class="nav-list-item-link">Contact us</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer-designed">Designed by Alisa Samborskaya<br>
+            ©RSSchool & ©Yem Digital 2021</p>
+        </div>
+      </div>      
     </div>
-    <script src="script.js"></script>
-  </body>
+  </footer>
+  <script src="script.js"></script>
+</body>
 </html>

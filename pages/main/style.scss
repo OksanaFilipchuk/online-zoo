@@ -2,31 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.roboto-normal-700 {
+  scroll-behavior: smooth;
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 700;
 }
 
-.roboto-normal-500 {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
+a {
+  text-decoration: none;
 }
 
-.roboto-normal-400 {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
+@mixin fontProperty($font-weight, $font-size, $line-height, $color) {
+  font-weight: $font-weight;
+  font-size: $font-size;  
+  line-height: $line-height;
+  color: $color;
 }
 
-.roboto-normal-300 {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-}
+$font-color1: #333B41;
+$font-color2: #FE9013;
+$font-color3: #BDBDBD;
+$font-color4: #767474;
+$font-color5: #FFFFFF;
 
 .first-block{
   background: url("../../assets/img/GiantPanda.jpg");
@@ -34,12 +30,9 @@
   position: relative;
 
   &-header {
-    @extend .roboto-normal-700;     
-    font-size: 106.496px;
-    line-height: 75%;
+    @include fontProperty(700, 106.496px, 75%, $font-color5);
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
     position: relative;
     width: 500px;
     height: 400px;
@@ -80,6 +73,7 @@
 
   &-list{
     display: flex;
+    margin-left: 63px;
   }
 
   &-list-item {
@@ -88,11 +82,12 @@
   }
 
   &-list-item-link {
-    @extend .roboto-normal-500;
-    color: #FFFFFF;    
-    font-size: 16px;
-    line-height: 140%;
-    text-decoration: none;
+    @include fontProperty(500, 16px, 140%, $font-color5);
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      color: $font-color2;
+    }
 
     &-active {
       color:rgba(249, 128, 75, 1)
@@ -100,12 +95,21 @@
   }  
 }
 
+.petStory-logo {
+  display: block;
+  width: 82px;
+  height: 52px;
+  padding: 3.55px 4.75px;
+  @include fontProperty(400, 19.0145px, 120%, $font-color5);
+  text-align: center;
+  border: 1.18841px solid #FFFFFF;
+  background-image: url(../../assets/logo/bamboo.svg);
+  background-repeat: no-repeat;
+  background-position: 8px 24.6px;
+}
+
 .designed {
-  @extend .roboto-normal-500;
-  // margin: 0;   
-  font-size: 16px;
-  line-height: 140%;
-  color: #FFFFFF;
+  @include fontProperty(500, 16px, 140%, $font-color5);
 }
 
 .container {
@@ -120,19 +124,30 @@
   justify-content: end;
   align-items: flex-end;
   gap: 69px;
-  
-  &-button {
-    @extend .roboto-normal-500;
-    width: 298px;
-    padding: 16px 4px;
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+}
+
+.button {
+  @include fontProperty (500, 16px, 140%, $font-color5);
+  display: block;
+  width: 298px;
+  padding: 16px 4px;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background: linear-gradient(113.96deg, #faa94d 1.49%, #f89c74 101.44%);
+  }
+
+  &-centred {
+    margin: 0 auto;
     border-radius: 25px;
-    border: none;      
-    font-size: 16px;
-    line-height: 140%;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
+  }
+
+  &-left {
+    border-radius: 5px;
   }
 }
 
@@ -165,27 +180,28 @@
   }
 
   &-header {
-    @extend .roboto-normal-400;
-    font-size: 48px;
-    line-height: 120%;
-    color: #333B41;
+    @include fontProperty(400, 48px, 120%, $font-color1); 
     margin: 0 0 20px 0;
   }
 
   &-paragraph {
-    @extend .roboto-normal-400;
-    font-size: 16px;
-    line-height: 140%;
-    color: #333B41;
+    @include fontProperty(400, 16px, 140%, $font-color1);    
   }
 
   h3 {
-    @extend .roboto-normal-400;
-    font-size: 24px;
-    line-height: 120%;
-    color: #333B41;
+    @include fontProperty(400, 24px, 120%, $font-color1);
     margin: 54px 0 34px 0;
   }
+}
+
+.pets {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-bottom: 100px;
+  background: url(../../assets/img/palm_foto.jpg), url(../../assets/img/strelitzia.jpg);
+  background-position: left bottom, right bottom;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .pets-carousel {
@@ -235,21 +251,266 @@
   }
 
   h3 {
-    @extend .roboto-normal-500;
+    @include fontProperty(500, 16px, 140%, #000000);
     margin-left: 16px;
-    margin-top: 8px;
-    font-size: 16px;
-    line-height: 140%;
-    text-transform: uppercase;
-    color: #000000;
+    margin-top: 8px;    
+    text-transform: uppercase;    
   }
 
   h6 {
-    @extend .roboto-normal-300;
+    @include fontProperty(300, 15px, 120px, #000000);
     margin-left: 16px;
-    font-size: 15px;
-    line-height: 120%;
-    color: #000000;
     margin-bottom: 14px;
   }
 }
+
+.pick-friend {
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  opacity: 0.9;
+  padding-top: 69px;
+  padding-bottom: 100px;
+
+  &-content {
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    padding: 41px 0 59px 0;
+
+    &-header {
+      @include fontProperty (400, 48px, 120%,$font-color2);
+      text-align: center;      
+    }
+
+    &-paragraph1,
+    &-paragraph2,
+    &-paragraph3 {
+      margin-left: 99px;      
+    }
+
+    &-paragraph1 {
+      @include fontProperty(400, 24px, 120%, $font-color1);
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    &-paragraph2 {
+      @include fontProperty(500, 16px, 130%, $font-color1);
+      margin-bottom: 10px;
+    }
+
+    &-paragraph3 {
+      @include fontProperty(400, 16px, 130%, $font-color1);
+      max-width: 863px;
+    }
+  }
+}
+
+.underlined {
+  text-decoration: underline;
+  text-decoration-color: $font-color2;
+}
+
+.how-it-work-header {
+  @include fontProperty(400, 36px, 130%, $font-color1);
+  margin-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.how-it-work-block{
+  display: flex;
+  justify-content: center;
+  gap: 30.5px;
+  margin-bottom: 60px;
+}
+
+.how-it-work-action {
+  width: 168px;
+  height: 244px;  
+
+  &-pay,
+  &-zoo,
+  &-dish {
+    width: 168px;
+    height: 168px;
+    border: 1px solid;    
+    border-image: linear-gradient(rgba(250, 111, 50, 1), rgba(254, 144, 19, 1)) 30;
+    border-radius: 5px;    
+  }
+
+  &-pay {
+    background: url(../../assets/img/pay.svg), #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &-zoo {
+    background: url(../../assets/img/zoo.svg), #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &-dish {
+    background: url(../../assets/img/monkey.svg), #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &-descript {
+    @include fontProperty(400, 16px, 140%, $font-color1);
+    margin-top: 30px;
+  }
+}
+
+.testimonials {
+  padding-bottom: 180px;
+  background: url("../../assets/img/leav_foto.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  &-wrapper {
+    display: flex;
+    gap: 29px;
+  }
+
+  &-header {
+    @include fontProperty (400, 36px, 130%, $font-color1);
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 47px;
+  }
+
+}
+
+.testimonial {
+  width: 268px;
+  height: 391px;
+  background: #F1F3F2;
+  border-radius: 20px;
+  padding: 16px 15px 13px 19px;
+  border: 2px solid;
+  border-image: linear-gradient(rgba(254, 189, 171, 0.74),
+                                rgba(243, 169, 248, 0.66),
+                                rgba(224, 216, 240, 1),
+                                rgba(234, 247, 254, 1), 
+                                rgba(234, 247, 254, 1), 30) ;
+  
+  &-author {
+    @include fontProperty(400, 16px, 120%, #000000);  
+
+    &-photo {
+      float: left;
+      margin-right: 10px
+    }
+
+    &-data {
+    @include fontProperty(300, 15px, 120%, $font-color3);
+    }
+  }
+
+  &-content {
+    @include fontProperty(300,15px, 120%,$font-color4);
+    margin-top: 10px;
+  }
+
+}
+
+.slider-track {
+  width: 599px;
+  height: 8px;
+  margin: 22px auto 32px;
+  border: 0.5px solid rgba(234, 247, 254, 1);
+  border-image: linear-;
+  background: #F5F7F6;
+  border-radius: 5px;
+}
+
+.slider-thumb {
+  width: 120px;
+  height: 5px;
+  background: #FE9013;
+  border-radius: 5px;
+}
+
+
+.footer{
+  background-color: #000000;
+  padding-bottom: 50px;
+
+  &-line1 {
+    display: flex;
+    padding: 41px 0 36px;
+    justify-content: space-between;
+  }
+
+  &-line2 {
+    display: flex;
+    margin-top: 44px;
+    justify-content: space-between;
+    align-items: flex-end
+  }
+
+}
+
+.subscribe {
+
+  &-header {
+    @include fontProperty(400, 24px, 120%, $font-color5);
+  }
+
+  &-input {
+    width: 228px;
+    height: 42px;
+    border: 0.7px solid rgba(249, 128, 75, 1);
+    padding: 10px 7px 10px 10px;
+    border-radius: 2px;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 140%;
+    color: $font-color4;
+    margin-top: 14px;
+    margin-right: 10px;
+  }
+
+  &-submit {
+    width: 129px;
+    height: 42px;
+    @include fontProperty(400, 16px, 140%, #4B9200);
+    background: #F1F3F2;
+    border: 1px solid #4B9200;
+    border-radius: 5px;
+  }
+
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &-item {
+    display: block;
+    align-items: center;
+  }
+
+  &-img {
+    display: block;
+    margin: 5px auto;
+  }
+  
+  &-img-background {
+    width: 26px;
+    height: 26px;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  &-link {
+    @include fontProperty(400, 16px, 140%, $font-color5);
+    vertical-align: super;
+  }
+
+}
+
+.footer-designed {
+  @include fontProperty(100, 16px, 130%, $font-color5 );
+} 
