@@ -26,19 +26,23 @@ $font-color5: #FFFFFF;
 
 .first-block{
   background: url("../../assets/img/GiantPanda.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 780px;
   position: relative;
 
-  &-header {
-    @include fontProperty(700, 106.496px, 75%, $font-color5);
-    text-align: center;
-    text-transform: uppercase;
-    position: relative;
+  &-header {    
     width: 500px;
     height: 400px;
     top: 74px;
     right: 0px;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    @include fontProperty(700, 106.496px, 75%, $font-color5);
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
 
     &-wrapper{
       position: relative;
@@ -72,8 +76,7 @@ $font-color5: #FFFFFF;
   justify-content: space-between;
 
   &-list{
-    display: flex;
-    margin-left: 63px;
+    display: flex;    
   }
 
   &-list-item {
@@ -106,6 +109,7 @@ $font-color5: #FFFFFF;
   background-image: url(../../assets/logo/bamboo.svg);
   background-repeat: no-repeat;
   background-position: 8px 24.6px;
+  margin-right: 63px;
 }
 
 .designed {
@@ -163,7 +167,7 @@ $font-color5: #FFFFFF;
 
 .backstage {
   padding-top: 140px;
-  padding-bottom: 140px;
+  padding-bottom: 175px;
   background-image: url("../../assets/img/flower_foto1.jpg");
   background-position: right 0;
   background-repeat: no-repeat;
@@ -219,7 +223,8 @@ $font-color5: #FFFFFF;
     flex: none;
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+    cursor: pointer;
   }
 
 }
@@ -235,15 +240,23 @@ $font-color5: #FFFFFF;
 
 .pet-card {
   width: 366px;
+  height: 426px;
   border: 1px solid;
+  border-radius: 5px;
   border-image: linear-gradient(rgba(250, 111, 50, 1), rgba(254, 144, 19, 1)) 30;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  overflow: visible;
 
   &-img {
     width: 100%;
+    transition: all 300ms ease-in-out;
+
+    &:hover{
+      transform: scale(105.4%);
+    }
   }
 
   &-meal {
@@ -258,7 +271,7 @@ $font-color5: #FFFFFF;
   }
 
   h6 {
-    @include fontProperty(300, 15px, 120px, #000000);
+    @include fontProperty(300, 15px, 120%, #000000);
     margin-left: 16px;
     margin-bottom: 14px;
   }
@@ -305,9 +318,15 @@ $font-color5: #FFFFFF;
   }
 }
 
+.arrow {
+  align-self: baseline;
+  margin-top: 60px;
+}
+
 .underlined {
   text-decoration: underline;
   text-decoration-color: $font-color2;
+  color: $font-color1;
 }
 
 .how-it-work-header {
@@ -364,7 +383,7 @@ $font-color5: #FFFFFF;
   padding-bottom: 180px;
   background: url("../../assets/img/leav_foto.jpg");
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right 135%;
 
   &-wrapper {
     display: flex;
@@ -381,18 +400,14 @@ $font-color5: #FFFFFF;
 }
 
 .testimonial {
+  position: relative;
   width: 268px;
   height: 391px;
   background: #F1F3F2;
   border-radius: 20px;
-  padding: 16px 15px 13px 19px;
-  border: 2px solid;
-  border-image: linear-gradient(rgba(254, 189, 171, 0.74),
-                                rgba(243, 169, 248, 0.66),
-                                rgba(224, 216, 240, 1),
-                                rgba(234, 247, 254, 1), 
-                                rgba(234, 247, 254, 1), 30) ;
-  
+  padding: 15px 14px 12px 18px;
+  border: 2px solid  rgba(243, 169, 248, 0.66);
+
   &-author {
     @include fontProperty(400, 16px, 120%, #000000);  
 
@@ -417,7 +432,7 @@ $font-color5: #FFFFFF;
   width: 599px;
   height: 8px;
   margin: 22px auto 32px;
-  border: 0.5px solid rgba(234, 247, 254, 1);
+  border: 0.5px solid rgba(243, 169, 248, 0.66);;
   border-image: linear-;
   background: #F5F7F6;
   border-radius: 5px;
@@ -432,7 +447,7 @@ $font-color5: #FFFFFF;
 
 
 .footer{
-  background-color: #000000;
+  background-color: #111115;;
   padding-bottom: 50px;
 
   &-line1 {
@@ -484,7 +499,8 @@ $font-color5: #FFFFFF;
 .social-media {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
+  width: 25%;
 
   &-item {
     display: block;
@@ -505,12 +521,21 @@ $font-color5: #FFFFFF;
   }
 
   &-link {
-    @include fontProperty(400, 16px, 140%, $font-color5);
+    @include fontProperty(300, 16px, 140%, $font-color5);
     vertical-align: super;
+    margin-left: 12px
   }
 
 }
 
 .footer-designed {
   @include fontProperty(100, 16px, 130%, $font-color5 );
-} 
+
+  & p:last-child{
+    margin-top: 10px;
+  }
+}
+
+.footer-nav-list-item-link{
+  @include fontProperty(400, 16px, 140%, $font-color5)
+}

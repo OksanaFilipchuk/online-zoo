@@ -13,10 +13,19 @@ a {
 
 .first-block {
   background: url("../../assets/img/GiantPanda.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 780px;
   position: relative;
 }
 .first-block-header {
+  width: 500px;
+  height: 400px;
+  top: 74px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   font-weight: 700;
   font-size: 106.496px;
   line-height: 75%;
@@ -24,11 +33,6 @@ a {
   text-align: center;
   text-transform: uppercase;
   position: relative;
-  width: 500px;
-  height: 400px;
-  top: 74px;
-  right: 0px;
-  margin: 0;
 }
 .first-block-header-wrapper {
   position: relative;
@@ -58,7 +62,6 @@ a {
 }
 .nav-list {
   display: flex;
-  margin-left: 63px;
 }
 .nav-list-item {
   list-style: none;
@@ -92,6 +95,7 @@ a {
   background-image: url(../../assets/logo/bamboo.svg);
   background-repeat: no-repeat;
   background-position: 8px 24.6px;
+  margin-right: 63px;
 }
 
 .designed {
@@ -152,7 +156,7 @@ a {
 
 .backstage {
   padding-top: 140px;
-  padding-bottom: 140px;
+  padding-bottom: 175px;
   background-image: url("../../assets/img/flower_foto1.jpg");
   background-position: right 0;
   background-repeat: no-repeat;
@@ -213,6 +217,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .pet-cards {
@@ -227,16 +232,23 @@ a {
 
 .pet-card {
   width: 366px;
+  height: 426px;
   border: 1px solid;
+  border-radius: 5px;
   -o-border-image: linear-gradient(rgb(250, 111, 50), rgb(254, 144, 19)) 30;
      border-image: linear-gradient(rgb(250, 111, 50), rgb(254, 144, 19)) 30;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  overflow: visible;
 }
 .pet-card-img {
   width: 100%;
+  transition: all 300ms ease-in-out;
+}
+.pet-card-img:hover {
+  transform: scale(105.4%);
 }
 .pet-card-meal {
   margin-right: 13px;
@@ -253,7 +265,7 @@ a {
 .pet-card h6 {
   font-weight: 300;
   font-size: 15px;
-  line-height: 120px;
+  line-height: 120%;
   color: #000000;
   margin-left: 16px;
   margin-bottom: 14px;
@@ -305,10 +317,16 @@ a {
   max-width: 863px;
 }
 
+.arrow {
+  align-self: baseline;
+  margin-top: 60px;
+}
+
 .underlined {
   text-decoration: underline;
   -webkit-text-decoration-color: #FE9013;
           text-decoration-color: #FE9013;
+  color: #333B41;
 }
 
 .how-it-work-header {
@@ -367,7 +385,7 @@ a {
   padding-bottom: 180px;
   background: url("../../assets/img/leav_foto.jpg");
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right 135%;
 }
 .testimonials-wrapper {
   display: flex;
@@ -384,14 +402,13 @@ a {
 }
 
 .testimonial {
+  position: relative;
   width: 268px;
   height: 391px;
   background: #F1F3F2;
   border-radius: 20px;
-  padding: 16px 15px 13px 19px;
-  border: 2px solid;
-  -o-border-image: linear-gradient(rgba(254, 189, 171, 0.74), rgba(243, 169, 248, 0.66), rgb(224, 216, 240), rgb(234, 247, 254), rgb(234, 247, 254), 30);
-     border-image: linear-gradient(rgba(254, 189, 171, 0.74), rgba(243, 169, 248, 0.66), rgb(224, 216, 240), rgb(234, 247, 254), rgb(234, 247, 254), 30);
+  padding: 15px 14px 12px 18px;
+  border: 2px solid rgba(243, 169, 248, 0.66);
 }
 .testimonial-author {
   font-weight: 400;
@@ -421,7 +438,7 @@ a {
   width: 599px;
   height: 8px;
   margin: 22px auto 32px;
-  border: 0.5px solid rgb(234, 247, 254);
+  border: 0.5px solid rgba(243, 169, 248, 0.66);
   -o-border-image: linear-;
      border-image: linear-;
   background: #F5F7F6;
@@ -436,7 +453,7 @@ a {
 }
 
 .footer {
-  background-color: #000000;
+  background-color: #111115;
   padding-bottom: 50px;
 }
 .footer-line1 {
@@ -485,7 +502,8 @@ a {
 .social-media {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
+  width: 25%;
 }
 .social-media-item {
   display: block;
@@ -503,16 +521,27 @@ a {
   display: inline-block;
 }
 .social-media-link {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   line-height: 140%;
   color: #FFFFFF;
   vertical-align: super;
+  margin-left: 12px;
 }
 
 .footer-designed {
   font-weight: 100;
   font-size: 16px;
   line-height: 130%;
+  color: #FFFFFF;
+}
+.footer-designed p:last-child {
+  margin-top: 10px;
+}
+
+.footer-nav-list-item-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
   color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */

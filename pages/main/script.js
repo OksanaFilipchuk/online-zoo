@@ -99,7 +99,6 @@ function showCards(){
 function showTestimonials(){
   
   let testimonialsWrapper = document.querySelector(".testimonials-wrapper");
-  console.log(testimonialsWrapper)
   
   testimonials.forEach(el => {
     let testimonialBlock = document.createElement("div");
@@ -127,8 +126,8 @@ function showTestimonials(){
 }
 document.querySelectorAll(".nav-list-item-link").forEach(el=>
   el.addEventListener("click", function(){
-    document.querySelector(".nav-list-item-link-active").classList.remove("nav-list-item-link-active");
-    el.classList.add("nav-list-item-link-active");
+    document.querySelectorAll(".nav-list-item-link-active").forEach(el=>{
+      el.classList.remove("nav-list-item-link-active")});    
   }))
 
 window.addEventListener('DOMContentLoaded', showCards)
