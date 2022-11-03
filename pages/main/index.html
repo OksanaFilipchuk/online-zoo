@@ -18,7 +18,7 @@
             <a href="index.html"><h1 class="petStory-logo">PetStory online</h1></a>
             <ul class="nav-list">
               <li class="nav-list-item"><a href="index.html" class="nav-list-item-link nav-list-item-link-active">About</a></li>
-              <li class="nav-list-item"><a href="#" class="nav-list-item-link">Map</a></li>
+              <li class="nav-list-item"><a href="#map" class="nav-list-item-link">Map</a></li>
               <li class="nav-list-item"><a href="#zoos" class="nav-list-item-link">Zoos</a></li>
               <li class="nav-list-item"><a href="../donate/index.html" class="nav-list-item-link">Donate</a></li>
               <li class="nav-list-item"><a href="#footer" class="nav-list-item-link">Contact us</a></li>
@@ -39,7 +39,7 @@
       </div>                
     </div>
   </div>
-  <div class="backstage">
+  <div class="backstage" id ="map">
     <div class="container backstage-container">
       <img src="../../assets/img/bamboo-cap.jpg" alt="bamboo-cap" class="backstage-img">
       <div class="backstage-content">
@@ -93,9 +93,9 @@
       <h3 class="testimonials-header">Testimonials</h3>
       <div class="testimonials-wrapper">    
       </div>
-      <div class="slider-track">
-        <div class="slider-thumb"></div>            
-      </div>
+      <input type="range" class="slider-track">
+        <!-- <div class="slider-thumb"></div>             -->
+      </input>
       <button class="button button-left">leave feedback</button>
     </div>    
   </div>
@@ -103,11 +103,11 @@
     <div class="container">
       <div class = "footer-line1">
         <a href="#"><img src="../../assets/img/logo_footer.png" alt="logo"></a>
-        <div class = "subscribe">
-          <h4 class="subscribe-header">Subscribe to our news</h4>
-          <input type="email" class="subscribe-input" placeholder="Enter your email">
-          <input type="submit" class="subscribe-submit" value="Submit">
-        </div>
+        <form class = "subscribe">
+          <label for="email" class="subscribe-header">Subscribe to our news</label>
+          <input type="email" id = "email" name ="email" class="subscribe-input" placeholder="Enter your email" required="required">
+          <input type="submit" name ="email" class="subscribe-submit" value="Submit">
+        </form>
       </div>
       <a href="../donate/index.html" class="button button-left">donate for volunteers</a>
       <div class = "footer-line2">
