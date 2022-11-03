@@ -114,6 +114,11 @@ $font-color5: #FFFFFF;
 
 .designed {
   @include fontProperty(500, 16px, 140%, $font-color5);
+  transition: all ease-in-out 200ms;
+
+  &:hover {
+    color: $font-color2;
+  }
 }
 
 .container {
@@ -407,6 +412,7 @@ $font-color5: #FFFFFF;
   border-radius: 20px;
   padding: 15px 14px 12px 18px;
   border: 2px solid  rgba(243, 169, 248, 0.66);
+  overflow: hidden;
 
   &-author {
     @include fontProperty(400, 16px, 120%, #000000);  
@@ -432,10 +438,16 @@ $font-color5: #FFFFFF;
   width: 599px;
   height: 8px;
   margin: 22px auto 32px;
-  border: 0.5px solid rgba(243, 169, 248, 0.66);;
-  border-image: linear-;
+  border: 0.5px solid rgba(243, 169, 248, 0.66);
   background: #F5F7F6;
   border-radius: 5px;
+
+  &::-webkit-slider-thumb{
+    width: 120px;
+    height: 5px;
+    background: #FE9013;
+    border-radius: 5px;
+  }
 }
 
 .slider-thumb {
@@ -469,6 +481,7 @@ $font-color5: #FFFFFF;
 
   &-header {
     @include fontProperty(400, 24px, 120%, $font-color5);
+    display: block;
   }
 
   &-input {
@@ -483,6 +496,23 @@ $font-color5: #FFFFFF;
     color: $font-color4;
     margin-top: 14px;
     margin-right: 10px;
+
+    &:focus:invalid {
+      border: 2px solid #be0101;
+      outline: none;
+    }
+
+    &:focus:invalid ~ .subscribe-submit {
+      border: 2px solid #be0101;
+      color: #be0101;
+    }
+
+    &:focus:valid {
+      border: 1px solid #4B9200;
+      color: #4B9200;
+      outline: none;      
+    }
+    
   }
 
   &-submit {
@@ -492,6 +522,12 @@ $font-color5: #FFFFFF;
     background: #F1F3F2;
     border: 1px solid #4B9200;
     border-radius: 5px;
+    transition: all 200ms ease-in-out;
+
+    &:hover{
+      background-color: darken($color: #F1F3F2, $amount: 20);
+    }
+    
   }
 
 }
@@ -523,13 +559,24 @@ $font-color5: #FFFFFF;
   &-link {
     @include fontProperty(300, 16px, 140%, $font-color5);
     vertical-align: super;
-    margin-left: 12px
+    margin-left: 12px;
+    transition: all ease-in-out 200ms;
+
+    &:hover{
+      color: #4B9200;
+    }
   }
+  
 
 }
 
 .footer-designed {
   @include fontProperty(100, 16px, 130%, $font-color5 );
+  transition: all ease-in-out 200ms;
+
+  &:hover {
+    color: #4B9200;
+  }
 
   & p:last-child{
     margin-top: 10px;
