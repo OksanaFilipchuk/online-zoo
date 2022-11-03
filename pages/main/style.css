@@ -579,4 +579,35 @@ a {
   font-size: 16px;
   line-height: 140%;
   color: #FFFFFF;
+}
+
+input[type=range].styled-slider {
+  -webkit-appearance: none;
+  width: 599px;
+  height: 8px;
+  margin: 21px auto 31px;
+  display: block;
+}
+
+input[type=range].styled-slider:focus {
+  outline: none;
+}
+
+input[type=range].styled-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 116px;
+  height: 6px;
+  border-radius: 0;
+  background: #FE9013;
+  border: none;
+  box-shadow: 0 0 2px black;
+  margin-top: 0px;
+}
+
+input[type=range].styled-slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border: 1px solid #b2b2b2;
+  border-radius: 5px;
+  background: #F5F7F6;
+  box-shadow: none;
 }/*# sourceMappingURL=style.css.map */
