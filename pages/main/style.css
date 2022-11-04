@@ -138,7 +138,11 @@ a {
   transition: all 200ms ease-in-out;
 }
 .button:hover {
-  background: linear-gradient(113.96deg, #faa94d 1.49%, #f89c74 101.44%);
+  background: linear-gradient(113.96deg, #E47209 1.49%, #E47209 101.44%);
+  cursor: pointer;
+}
+.button:active {
+  background: linear-gradient(113.96deg, #4B9200 1.49%, #4B9200 101.44%);
 }
 .button-centred {
   margin: 0 auto;
@@ -162,7 +166,7 @@ a {
   padding-top: 140px;
   padding-bottom: 175px;
   background-image: url("../../assets/img/flower_foto1.jpg");
-  background-position: right 0;
+  background-position: right 10px;
   background-repeat: no-repeat;
 }
 .backstage-container {
@@ -225,7 +229,10 @@ a {
   transition: all ease-in-out 200ms;
 }
 .pets-carousel-button:hover {
-  background: linear-gradient(113.96deg, #faa94d 1.49%, #f89c74 101.44%);
+  background: linear-gradient(113.96deg, #E47209 1.49%, #E47209 101.44%);
+}
+.pets-carousel-button:active {
+  background: linear-gradient(113.96deg, #4B9200 1.49%, #4B9200 101.44%);
 }
 
 .pet-cards {
@@ -241,10 +248,8 @@ a {
 .pet-card {
   width: 366px;
   height: 426px;
-  border: 1px solid;
+  border: 1px solid rgb(254, 144, 19);
   border-radius: 5px;
-  -o-border-image: linear-gradient(rgb(250, 111, 50), rgb(254, 144, 19)) 30;
-     border-image: linear-gradient(rgb(250, 111, 50), rgb(254, 144, 19)) 30;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -412,7 +417,7 @@ a {
   padding-bottom: 180px;
   background: url("../../assets/img/leav_foto.jpg");
   background-repeat: no-repeat;
-  background-position: right 135%;
+  background-position: right 136%;
 }
 .testimonials-wrapper {
   display: flex;
