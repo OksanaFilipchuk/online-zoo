@@ -94,12 +94,16 @@ function showCards(){
     petCard.appendChild(meal);
     petCards.appendChild(petCard);
 
-    petCard.addEventListener("mouseover", event=>{
-        if(event.target.parentNode.classList.contains("pet-card")){
-        event.target.parentNode.children[1].classList.add("pet-card-content-active");
-        event.target.parentNode.children[0].classList.add("pet-card-img-active");
-        }
+    petCard.addEventListener("mouseenter", event=>{
+        event.target.children[1].classList.add("pet-card-content-active");
+        event.target.children[0].classList.add("pet-card-img-active");
       })
+
+      petCard.addEventListener("mouseleave", event=>{
+        event.target.children[1].classList.remove("pet-card-content-active");
+        event.target.children[0].classList.remove("pet-card-img-active");
+      })
+
     })}
 
 function showTestimonials(){
@@ -137,7 +141,5 @@ document.querySelectorAll(".nav-list-item-link").forEach(el=>
       el.classList.remove("nav-list-item-link-active")});    
   }))
 
-
-
-window.addEventListener('DOMContentLoaded', showCards)
-window.addEventListener('DOMContentLoaded', showTestimonials)
+window.addEventListener('DOMContentLoaded', showCards);
+window.addEventListener('DOMContentLoaded', showTestimonials);
