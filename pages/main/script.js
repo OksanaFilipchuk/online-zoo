@@ -43,28 +43,28 @@ let testimonials = [
     "place": "Local Austria",
     "day": "Today",
     "photo": "../../assets/img/author.svg",
-    "comment": "The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals."
+    "comment": `The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.`
   },
   {
     "author": "Oskar Samborsky",
     "place": "Local Austria",
     "day": "Yesterday",
     "photo": "../../assets/img/samborsky.jpg",
-    "comment": "Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for "
+    "comment": "Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. <br> The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for "
   },
   {
     "author": "Fredericka Michelin",
     "place": "Local Austria",
     "day": "Yesterday",
     "photo": "../../assets/img/michelin.jpg",
-    "comment": "The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met.The best online zoo I’ve met. My son delighted very much ljves to "
+    "comment": "The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. <br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met.<br>The best online zoo I’ve met. My son delighted very much ljves to "
   },
   {
     "author": "Mila Riksha",
     "place": "Local Austria",
     "day": "Yesterday",
     "photo": "../../assets/img/riksha.jpg",
-    "comment": "My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf "
+    "comment": "My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf "
   },
 
 ]
@@ -93,8 +93,14 @@ function showCards(){
     meal.setAttribute("alt", "meal");
     petCard.appendChild(meal);
     petCards.appendChild(petCard);
-})
-}
+
+    petCard.addEventListener("mouseover", event=>{
+        if(event.target.parentNode.classList.contains("pet-card")){
+        event.target.parentNode.children[1].classList.add("pet-card-content-active");
+        event.target.parentNode.children[0].classList.add("pet-card-img-active");
+        }
+      })
+    })}
 
 function showTestimonials(){
   
@@ -115,7 +121,7 @@ function showTestimonials(){
     testimonialAuthorData.textContent = el.place + " • " + el.day;
     let testimonialContent = document.createElement("p");
     testimonialContent.classList.add("testimonial-content");
-    testimonialContent.textContent = el.comment;
+    testimonialContent.innerHTML = el.comment;
     testimonialBlock.appendChild(testimonialAuthorPhoto);
     testimonialBlock.appendChild(testimonialAuthor);
     testimonialBlock.appendChild(testimonialAuthorData);
@@ -124,11 +130,14 @@ function showTestimonials(){
   })
 
 }
+
 document.querySelectorAll(".nav-list-item-link").forEach(el=>
   el.addEventListener("click", function(){
     document.querySelectorAll(".nav-list-item-link-active").forEach(el=>{
       el.classList.remove("nav-list-item-link-active")});    
   }))
+
+
 
 window.addEventListener('DOMContentLoaded', showCards)
 window.addEventListener('DOMContentLoaded', showTestimonials)
