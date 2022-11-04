@@ -230,8 +230,14 @@ $font-color5: #FFFFFF;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-  }
+    transition: all ease-in-out 200ms;
 
+    &:hover {
+      background: linear-gradient(113.96deg, #faa94d 1.49%, #f89c74 101.44%);
+    }
+  
+  }
+  
 }
 
 .pet-cards {
@@ -253,19 +259,40 @@ $font-color5: #FFFFFF;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  overflow: visible;
+  overflow: hidden;
+  position: relative;
 
-  &-img {
+  &-img {    
     width: 100%;
+    height: 86%;
     transition: all 300ms ease-in-out;
 
-    &:hover{
+    &-active{
       transform: scale(105.4%);
     }
   }
 
+  &-content {
+    position: absolute;
+    top: 364px;
+    transition: all 400ms ease-in-out;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  &-content-active {
+    width: 100%;
+    height: 20%;
+    position: absolute;    
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: $font-color5;
+  }
+  
   &-meal {
-    margin-right: 13px
+    position: absolute;
+    right: 13px;
+    bottom: 10px
   }
 
   h3 {
@@ -434,30 +461,6 @@ $font-color5: #FFFFFF;
 
 }
 
-.slider-track {
-  width: 599px;
-  height: 8px;
-  margin: 22px auto 32px;
-  border: 0.5px solid rgba(243, 169, 248, 0.66);
-  background: #F5F7F6;
-  border-radius: 5px;
-
-  &::-webkit-slider-thumb{
-    width: 120px;
-    height: 5px;
-    background: #FE9013;
-    border-radius: 5px;
-  }
-}
-
-.slider-thumb {
-  width: 120px;
-  height: 5px;
-  background: #FE9013;
-  border-radius: 5px;
-}
-
-
 .footer{
   background-color: #111115;;
   padding-bottom: 50px;
@@ -527,7 +530,7 @@ $font-color5: #FFFFFF;
     &:hover{
       background-color: darken($color: #F1F3F2, $amount: 20);
     }
-    
+
   }
 
 }
@@ -565,8 +568,7 @@ $font-color5: #FFFFFF;
     &:hover{
       color: #4B9200;
     }
-  }
-  
+  }  
 
 }
 
