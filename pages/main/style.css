@@ -542,6 +542,15 @@ a {
   display: block;
   align-items: center;
 }
+.social-media-item:hover {
+  cursor: pointer;
+}
+.social-media-item:hover .social-media-img-background {
+  background: #4B9200;
+}
+.social-media-item:hover .social-media-link {
+  color: #4B9200;
+}
 .social-media-img {
   display: block;
   margin: 5px auto;
@@ -552,6 +561,7 @@ a {
   background: rgba(196, 196, 196, 0.5);
   border-radius: 50%;
   display: inline-block;
+  transition: all ease-in-out 200ms;
 }
 .social-media-link {
   font-weight: 300;
@@ -561,9 +571,6 @@ a {
   vertical-align: super;
   margin-left: 12px;
   transition: all ease-in-out 200ms;
-}
-.social-media-link:hover {
-  color: #4B9200;
 }
 
 .footer-designed {
