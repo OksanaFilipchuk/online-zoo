@@ -29,7 +29,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px -120px;
-    min-height: 470px;
+    min-height: 467px;
     position: relative;
   
     // &-header {    
@@ -286,30 +286,31 @@
   .pick-friend {
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     opacity: 0.9;
-    padding-top: 69px;
+    padding-top: 40px;
     padding-bottom: 100px;
   
     &-content {
       background: rgba(253, 253, 255, 0.52);
       backdrop-filter: blur(2px);
       border-radius: 20px;
-      padding: 41px 0 59px 0;
+      padding: 41px 92px 59px;
   
       &-header {
         @include fontProperty (400, 48px, 120%,$font-color2);
         text-align: center;      
       }
   
-      &-paragraph1,
-      &-paragraph2,
-      &-paragraph3 {
-        margin-left: 99px;      
-      }
+      // &-paragraph1,
+      // &-paragraph2,
+      // &-paragraph3 {
+      //   margin-left: 99px;      
+      // }
   
       &-paragraph1 {
         @include fontProperty(400, 24px, 120%, $font-color1);
-        margin-top: 30px;
-        margin-bottom: 40px;
+        margin-top: 25px;
+        margin-bottom: 56px;
+        text-align: left;
       }
   
     //   &-paragraph2 {
@@ -330,7 +331,8 @@
 
         &-info {
             @include fontProperty(400, 16px, 140%, $font-color5);
-            margin-bottom: 40px;
+            margin-bottom: 42px;
+            letter-spacing: 0.1px
         }
 
     }
@@ -559,6 +561,18 @@
     &-item {
       display: block;
       align-items: center;
+  
+      &:hover {
+        cursor: pointer;
+      }
+  
+      &:hover .social-media-img-background{
+        background: #4B9200;
+      }
+  
+      &:hover .social-media-link {
+        color: #4B9200;
+      }
     }
   
     &-img {
@@ -572,6 +586,7 @@
       background: rgba(196, 196, 196, 0.5);
       border-radius: 50%;
       display: inline-block;
+      transition: all ease-in-out 200ms;
     }
   
     &-link {
@@ -579,12 +594,7 @@
       vertical-align: super;
       margin-left: 12px;
       transition: all ease-in-out 200ms;
-  
-      &:hover{
-        color: #4B9200;
-      }
-    }
-    
+    }  
   
   }
   
@@ -603,4 +613,39 @@
   
   .footer-nav-list-item-link{
     @include fontProperty(400, 16px, 140%, $font-color5)
+  }
+
+  .share-link {
+    @include fontProperty(400, 16px, 140%, $font-color1);
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .diet {
+    display: flex;
+    gap: 64px;
+    justify-content: center;
+
+    &-number {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 11px;
+      margin-top: 55px;
+
+
+      &-wrapper {
+        display: flex;
+        gap: 60px;
+        justify-content: end;
+        align-items: center;
+
+
+      }
+
+      &-char {
+        @include fontProperty(500, 72px, 80%,  #000000)
+      }
+    }
   }

@@ -552,6 +552,18 @@ $font-color5: #FFFFFF;
   &-item {
     display: block;
     align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover .social-media-img-background{
+      background: #4B9200;
+    }
+
+    &:hover .social-media-link {
+      color: #4B9200;
+    }
   }
 
   &-img {
@@ -565,6 +577,7 @@ $font-color5: #FFFFFF;
     background: rgba(196, 196, 196, 0.5);
     border-radius: 50%;
     display: inline-block;
+    transition: all ease-in-out 200ms;
   }
 
   &-link {
@@ -572,10 +585,6 @@ $font-color5: #FFFFFF;
     vertical-align: super;
     margin-left: 12px;
     transition: all ease-in-out 200ms;
-
-    &:hover{
-      color: #4B9200;
-    }
   }  
 
 }
