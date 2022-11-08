@@ -47,16 +47,71 @@
         </div>        
         <img src="../../assets/img/animals-widget.svg" alt="panda">
       </div>
-      <div class="amount-range">
-        <h4 class = "amount-header">Amount</h4>
-        <div class="amount-input-wrapper">
-          <div class="amount-input">
-            <label class = "amount-input-label">
-              <input class ="amount-input-circle" type="radio">
-            </label>
+      <form action="#">
+        <div class="amount-range">
+          <h4 class = "amount-header">Amount</h4>
+          <div class="amount-inputs">
+            <div class="amount-input">
+              <div class = "amount-input-background">
+                <input class ="amount-input-circle" type="radio" name = "amount" id="amount-5000" value = "5000">
+              </div>
+            </div>
+            <div class="amount-input">
+              <div class = "amount-input-background">
+                <input class ="amount-input-circle" type="radio" name = "amount" id="amount-2000" value = "2000">
+              </div>
+            </div>
+            <div class="amount-input">
+              <div class = "amount-input-background">
+                <input class ="amount-input-circle" type="radio" name = "amount" id="amount-1000" value = "1000" checked>
+              </div>
+            </div>
+            <div class="amount-input">
+              <div class = "amount-input-background">
+                <input class ="amount-input-circle" type="radio" name = "amount" id="amount-500" value = "500">
+              </div>
+            </div>
+            <div class="amount-input">
+              <div class = "amount-input-background">
+                <input class ="amount-input-circle" type="radio" name = "amount" id="amount-250" value = "250">
+              </div>
+            </div>
+            <div class="amount-input">
+              <div class = "amount-input-background">
+                <input class ="amount-input-circle" type="radio" name = "amount" id="amount-100" value = "100">
+              </div>
+            </div>
+            <div class="amount-input">
+              <div class = "amount-input-background">
+                <input class ="amount-input-circle" type="radio" name = "amount" id="amount-50">
+              </div>
+            </div>
+            <div class="amount-input">
+              <div class = "amount-input-background">
+                <input class ="amount-input-circle" type="radio" name = "amount" id="amount-25">
+              </div>
+            </div>
+          </div>
+          <div class="amount-values">
+            <label for="amount-5000">$5000</label>
+            <label for="amount-2000">$2000</label>
+            <label for="amount-1000">$1000</label>
+            <label for="amount-500">$500</label>
+            <label for="amount-250">$250</label>
+            <label for="amount-100">$100</label>
+            <label for="amount-50">$50</label>
+            <label for="amount-25">$25</label>          
           </div>
         </div>
-      </div>
+        <div class = "another-amount-container">
+          <input type="number" class="another-amount" placeholder="Another amount">
+          <img src="../../assets/img/dollar.jpg" alt="" class = "dollar">
+        </div>        
+        <div class="periodicy">          
+          <label for="monthly" class="another-amount-periodicy-label"><input type="radio" class="another-amount-periodicy" name = "periodicy" value = "monthly" id = "monthly" checked>Monthly</label>          
+          <label for="once" class="another-amount-periodicy-label"><input type="radio" class="another-amount-periodicy" name = "periodicy" value = "once" id = "once">Once</label>
+        </div>        
+      </form>
       <a class="button button-centred" href="../donate/index.html">Feed a friend now</a>
       <a href="#" class = "share-link">Share with your friends on social networks</a>
     </div>
