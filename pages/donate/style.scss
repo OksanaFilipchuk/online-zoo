@@ -30,33 +30,7 @@
     background-size: cover;
     background-position: 0px -120px;
     min-height: 467px;
-    position: relative;
-  
-    // &-header {    
-    //   width: 500px;
-    //   height: 400px;
-    //   top: 74px;
-    //   right: 0px;
-    //   display: flex;
-    //   flex-direction: column;
-    //   gap: 60px;
-    //   @include fontProperty(700, 106.496px, 75%, $font-color5);
-    //   text-align: center;
-    //   text-transform: uppercase;
-    //   position: relative;
-  
-    //   &-wrapper{
-    //     position: relative;
-    //     right: 0;
-    //     left: auto;
-    //     top: 12px;
-    //     min-height: 487px;
-    //   }
-  
-    //   &-colored{
-    //     color: #FFEE2E;
-    //   }
-    // }
+    position: relative;  
   }
   
   .header {
@@ -128,14 +102,6 @@
     margin: 0 auto;
   }
   
-//   .watch-your {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: end;
-//     align-items: flex-end;
-//     gap: 69px;
-//   }
-  
   .button {
     @include fontProperty (500, 16px, 140%, $font-color5);
     display: block;
@@ -148,7 +114,8 @@
     transition: all 200ms ease-in-out;
   
     &:hover {
-      background: linear-gradient(113.96deg, #faa94d 1.49%, #f89c74 101.44%);
+      background:  linear-gradient(113.96deg, #E47209 1.49%, #E47209 101.44%);
+      cursor: pointer;
     }
   
     &-centred {
@@ -161,133 +128,11 @@
     }
   }
   
-//   .circle {
-//     width: 465px;
-//     height: 465px;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: 0;
-//     left: -74px;
-//     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-//   }
-  
-//   .backstage {
-//     padding-top: 140px;
-//     padding-bottom: 175px;
-//     background-image: url("../../assets/img/flower_foto1.jpg");
-//     background-position: right 0;
-//     background-repeat: no-repeat;
-  
-//     &-container {
-//       display: flex;
-//       gap: 87px;
-//     }
-  
-//     &-img {
-//       max-width: 609px;
-//       max-height: 403px;
-//       height: auto;
-//     }
-  
-//     &-header {
-//       @include fontProperty(400, 48px, 120%, $font-color1); 
-//       margin: 0 0 20px 0;
-//     }
-  
-//     &-paragraph {
-//       @include fontProperty(400, 16px, 140%, $font-color1);    
-//     }
-  
-//     h3 {
-//       @include fontProperty(400, 24px, 120%, $font-color1);
-//       margin: 54px 0 34px 0;
-//     }
-//   }
-  
-//   .pets {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 80px;
-//     padding-bottom: 100px;
-//     background: url(../../assets/img/palm_foto.jpg), url(../../assets/img/strelitzia.jpg);
-//     background-position: left bottom, right bottom;
-//     background-repeat: no-repeat, no-repeat;
-//   }
-  
-//   .pets-carousel {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     gap: 20px;
-  
-//     &-button {
-//       width: 62px;
-//       height: 62px;
-//       border: none;
-//       border-radius: 50%;
-//       background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-//       flex: none;
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-//       cursor: pointer;
-//     }
-  
-//   }
-  
-//   .pet-cards {
-//     display: flex;
-//     justify-content: center;
-//     margin: 0;
-//     flex-wrap: wrap;
-//     column-gap: 30px;
-//     row-gap: 20px;   
-//   }
-  
-//   .pet-card {
-//     width: 366px;
-//     height: 426px;
-//     border: 1px solid;
-//     border-radius: 5px;
-//     border-image: linear-gradient(rgba(250, 111, 50, 1), rgba(254, 144, 19, 1)) 30;
-//     overflow: hidden;
-//     display: flex;
-//     justify-content: space-between;
-//     flex-wrap: wrap;
-//     overflow: visible;
-  
-//     &-img {
-//       width: 100%;
-//       transition: all 300ms ease-in-out;
-  
-//       &:hover{
-//         transform: scale(105.4%);
-//       }
-//     }
-  
-//     &-meal {
-//       margin-right: 13px
-//     }
-  
-//     h3 {
-//       @include fontProperty(500, 16px, 140%, #000000);
-//       margin-left: 16px;
-//       margin-top: 8px;    
-//       text-transform: uppercase;    
-//     }
-  
-//     h6 {
-//       @include fontProperty(300, 15px, 120%, #000000);
-//       margin-left: 16px;
-//       margin-bottom: 14px;
-//     }
-//   }
-  
   .pick-friend {
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     opacity: 0.9;
     padding-top: 40px;
-    padding-bottom: 100px;
+    padding-bottom: 184px;
   
     &-content {
       background: rgba(253, 253, 255, 0.52);
@@ -297,14 +142,9 @@
   
       &-header {
         @include fontProperty (400, 48px, 120%,$font-color2);
-        text-align: center;      
+        text-align: center;
+        margin-left: -11px;      
       }
-  
-      // &-paragraph1,
-      // &-paragraph2,
-      // &-paragraph3 {
-      //   margin-left: 99px;      
-      // }
   
       &-paragraph1 {
         @include fontProperty(400, 24px, 120%, $font-color1);
@@ -313,15 +153,6 @@
         text-align: left;
       }
   
-    //   &-paragraph2 {
-    //     @include fontProperty(500, 16px, 130%, $font-color1);
-    //     margin-bottom: 10px;
-    //   }
-  
-    //   &-paragraph3 {
-    //     @include fontProperty(400, 16px, 130%, $font-color1);
-    //     max-width: 863px;
-    //   }
     }
 
     &-message{
@@ -403,80 +234,6 @@
       margin-top: 30px;
     }
   }
-  
-//   .testimonials {
-//     padding-bottom: 180px;
-//     background: url("../../assets/img/leav_foto.jpg");
-//     background-repeat: no-repeat;
-//     background-position: right 135%;
-  
-//     &-wrapper {
-//       display: flex;
-//       gap: 29px;
-//     }
-  
-//     &-header {
-//       @include fontProperty (400, 36px, 130%, $font-color1);
-//       text-align: center;
-//       margin-top: 140px;
-//       margin-bottom: 47px;
-//     }
-  
-//   }
-  
-//   .testimonial {
-//     position: relative;
-//     width: 268px;
-//     height: 391px;
-//     background: #F1F3F2;
-//     border-radius: 20px;
-//     padding: 15px 14px 12px 18px;
-//     border: 2px solid  rgba(243, 169, 248, 0.66);
-//     overflow: hidden;
-  
-//     &-author {
-//       @include fontProperty(400, 16px, 120%, #000000);  
-  
-//       &-photo {
-//         float: left;
-//         margin-right: 10px
-//       }
-  
-//       &-data {
-//       @include fontProperty(300, 15px, 120%, $font-color3);
-//       }
-//     }
-  
-//     &-content {
-//       @include fontProperty(300,15px, 120%,$font-color4);
-//       margin-top: 10px;
-//     }
-  
-//   }
-  
-//   .slider-track {
-//     width: 599px;
-//     height: 8px;
-//     margin: 22px auto 32px;
-//     border: 0.5px solid rgba(243, 169, 248, 0.66);
-//     background: #F5F7F6;
-//     border-radius: 5px;
-  
-//     &::-webkit-slider-thumb{
-//       width: 120px;
-//       height: 5px;
-//       background: #FE9013;
-//       border-radius: 5px;
-//     }
-//   }
-  
-//   .slider-thumb {
-//     width: 120px;
-//     height: 5px;
-//     background: #FE9013;
-//     border-radius: 5px;
-//   }
-  
   
   .footer{
     background-color: #111115;;
@@ -626,6 +383,7 @@
     display: flex;
     gap: 64px;
     justify-content: center;
+    margin-bottom: 48px;
 
     &-number {
       display: flex;
@@ -633,7 +391,12 @@
       justify-content: center;
       gap: 11px;
       margin-top: 55px;
+      margin-left: 14px;
+      width: 162px;
 
+      &-info {
+        margin-left: -23px;
+      }
 
       &-wrapper {
         display: flex;
@@ -641,11 +404,162 @@
         justify-content: end;
         align-items: center;
 
-
+        & img {
+          margin-top: 10px;
+        }
       }
 
       &-char {
         @include fontProperty(500, 72px, 80%,  #000000)
       }
+
     }
+  }
+
+  .amount-header {
+    @include fontProperty(400, 16px, 140%, #000000);
+    margin-bottom: 17px;
+  }
+
+  .amount-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 27px;
+    border-radius: 2px;
+    background: url(../../assets/img/Rectangle12.svg), #404950;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 0 12px;
+  }
+
+  .amount-input {
+
+    &-background {
+      display: block;
+      width: 40px;
+      height: 40px;
+      -webkit-appearance: none;
+      position: relative;      
+      transition: all 200ms ease-in-out;   
+
+      &:hover {
+        background: url(../../assets/img/roller_icon.svg) center no-repeat; 
+      }
+
+      &-active {
+        background: url(../../assets/img/roller_icon.svg) center no-repeat; 
+      }
+
+    }
+
+    &-circle {
+      width: 10px;
+      height: 10px;
+      display: block;
+      background-color: #FFEE2E;
+      border-radius: 50%;
+      -webkit-appearance: none;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      transition: 200ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.4);
+       }
+    }
+     
+  }
+
+  .amount-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-left: -26px;
+    margin-right: -20px;
+    padding-left: 0;
+    padding-right: 0px;
+    @include fontProperty(500, 26px, 140%,  #333B41);
+
+    & label {
+      width: 12.5%;
+      text-align: center;
+    }
+
+    & label:hover {
+      color:#FE9013;
+    }
+
+    & label:hover input{
+      background: url(../../assets/img/roller_icon.svg) center no-repeat; 
+    }
+
+  }
+
+  .another-amount {
+    display: block;
+    width: 268px;
+    height: 54px;
+    margin: 50px auto 25px;
+    border: 1px solid #929699;
+    border-radius: 2px;
+    padding-left: 14px;
+    background: transparent;
+    position: relative;
+    @include fontProperty(400, 16px, 140%,#929699);
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      background: url(../../assets/img/dollar.jpg) transparent center no-repeat;
+      width: 15px;
+      height: 20px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &-periodicy {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #FE9013;
+      border-radius: 50%;
+      text-align: center;
+      margin-right: 10px;
+
+      &:checked {
+        background-color: #4B9200;
+        border: 1px solid #4B9200;
+      } 
+    }
+
+    &-label {
+      @include fontProperty(400, 16px, -140%, #333B41);
+      text-align: center;
+    }
+  }
+  
+  .periodicy {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+    padding-right: 11px;
+  }
+
+  .another-amount-container{
+    position: relative;
+  }
+
+  .dollar {
+    position: absolute;
+    position: absolute;
+    top: 14px;
+    left: 600px;
   }

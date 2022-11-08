@@ -141,5 +141,12 @@ document.querySelectorAll(".nav-list-item-link").forEach(el=>
       el.classList.remove("nav-list-item-link-active")});    
   }))
 
+  document.querySelectorAll(".amount-values label").forEach(el=>{
+    el.addEventListener("mouseover", (event)=>{
+      let id = event.target.getAttribute("for");
+      document.querySelector("#"+id).classList.add(".amount-input-background-active")
+    })
+  })
+
 window.addEventListener('DOMContentLoaded', showCards);
 window.addEventListener('DOMContentLoaded', showTestimonials);
