@@ -436,42 +436,26 @@
   }
 
   .amount-input {
-
-    &-background {
-      display: block;
       width: 40px;
       height: 40px;
-      -webkit-appearance: none;
-      position: relative;      
-      transition: all 200ms ease-in-out;   
-
-      &:hover {
-        background: url(../../assets/img/roller_icon.svg) center no-repeat; 
-      }
-
-      &-active {
-        background: url(../../assets/img/roller_icon.svg) center no-repeat; 
-      }
-
-    }
-
-    &-circle {
-      width: 10px;
-      height: 10px;
       display: block;
-      background-color: #FFEE2E;
-      border-radius: 50%;
+      background: url(../../assets/img/Ellipse9.svg);
+      background-position: center;
+      background-repeat: no-repeat;
       -webkit-appearance: none;
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      transition: 200ms ease-in-out;
+      transition: all 200ms ease-in-out;
 
       &:hover {
-        transform: scale(1.4);
-       }
-    }
-     
+        background: url(../../assets/img/Ellipse9.svg), url(../../assets/img/roller_icon.svg);
+        background-position: center center;
+        background-repeat: no-repeat no-repeat;
+      }
+
+      &:checked {
+        background: url(../../assets/img/Ellipse9.svg), url(../../assets/img/roller_icon.svg);
+        background-position: center center;
+        background-repeat: no-repeat no-repeat;
+      }     
   }
 
   .amount-values {
@@ -493,10 +477,9 @@
       color:#FE9013;
     }
 
-    & label:hover input{
-      background: url(../../assets/img/roller_icon.svg) center no-repeat; 
+    &-active {
+      color:#FE9013;
     }
-
   }
 
   .another-amount {
@@ -514,10 +497,7 @@
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;
-      margin: 0;
-      background: url(../../assets/img/dollar.jpg) transparent center no-repeat;
-      width: 15px;
-      height: 20px;
+      margin: 0;     
     }
 
     &:focus {

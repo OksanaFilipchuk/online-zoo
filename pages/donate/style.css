@@ -427,34 +427,25 @@ a {
   padding: 0 12px;
 }
 
-.amount-input-background {
-  display: block;
+.amount-input {
   width: 40px;
   height: 40px;
+  display: block;
+  background: url(../../assets/img/Ellipse9.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   -webkit-appearance: none;
-  position: relative;
   transition: all 200ms ease-in-out;
 }
-.amount-input-background:hover {
-  background: url(../../assets/img/roller_icon.svg) center no-repeat;
+.amount-input:hover {
+  background: url(../../assets/img/Ellipse9.svg), url(../../assets/img/roller_icon.svg);
+  background-position: center center;
+  background-repeat: no-repeat no-repeat;
 }
-.amount-input-background-active {
-  background: url(../../assets/img/roller_icon.svg) center no-repeat;
-}
-.amount-input-circle {
-  width: 10px;
-  height: 10px;
-  display: block;
-  background-color: #FFEE2E;
-  border-radius: 50%;
-  -webkit-appearance: none;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  transition: 200ms ease-in-out;
-}
-.amount-input-circle:hover {
-  transform: scale(1.4);
+.amount-input:checked {
+  background: url(../../assets/img/Ellipse9.svg), url(../../assets/img/roller_icon.svg);
+  background-position: center center;
+  background-repeat: no-repeat no-repeat;
 }
 
 .amount-values {
@@ -477,8 +468,8 @@ a {
 .amount-values label:hover {
   color: #FE9013;
 }
-.amount-values label:hover input {
-  background: url(../../assets/img/roller_icon.svg) center no-repeat;
+.amount-values-active {
+  color: #FE9013;
 }
 
 .another-amount {
@@ -499,9 +490,6 @@ a {
 .another-amount::-webkit-outer-spin-button, .another-amount::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-  background: url(../../assets/img/dollar.jpg) transparent center no-repeat;
-  width: 15px;
-  height: 20px;
 }
 .another-amount:focus {
   outline: none;
