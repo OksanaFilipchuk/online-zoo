@@ -19,12 +19,20 @@ a {
   min-height: 467px;
   position: relative;
 }
+@media screen and (max-width: 1280px) {
+  .first-block {
+    min-height: 470px;
+    background-position: -184px -124px;
+    background-size: 164%;
+  }
+}
 
 .header {
   background-color: rgb(0, 0, 0);
 }
 .header-container {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 14px 0;
@@ -38,9 +46,30 @@ a {
 .nav-list {
   display: flex;
 }
+@media screen and (max-width: 1280px) {
+  .nav-list {
+    padding-left: 34px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .nav-list {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+}
 .nav-list-item {
   list-style: none;
   margin-right: 58px;
+}
+@media screen and (max-width: 1280px) {
+  .nav-list-item {
+    margin-right: 52px;
+    letter-spacing: 0.01em;
+  }
 }
 .nav-list-item-link {
   font-weight: 500;
@@ -48,6 +77,11 @@ a {
   line-height: 140%;
   color: #FFFFFF;
   transition: all 200ms ease-in-out;
+}
+@media screen and (max-width: 980px) {
+  .nav-list-item-link {
+    font-size: 14px;
+  }
 }
 .nav-list-item-link:hover {
   color: #FE9013;
@@ -80,6 +114,22 @@ a {
   color: #FFFFFF;
   transition: all ease-in-out 200ms;
 }
+@media screen and (max-width: 1280px) {
+  .designed {
+    font-size: 16.5px;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (max-width: 980px) {
+  .designed {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .designed {
+    display: none;
+  }
+}
 .designed:hover {
   color: #FE9013;
 }
@@ -88,6 +138,17 @@ a {
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
+}
+@media screen and (max-width: 1280px) {
+  .container {
+    max-width: 940px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .button {
@@ -122,12 +183,22 @@ a {
   padding-top: 40px;
   padding-bottom: 184px;
 }
+@media screen and (max-width: 1280px) {
+  .pick-friend {
+    padding-bottom: 30px;
+  }
+}
 .pick-friend-content {
   background: rgba(253, 253, 255, 0.52);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   border-radius: 20px;
   padding: 41px 92px 59px;
+}
+@media screen and (max-width: 1280px) {
+  .pick-friend-content {
+    padding: 19px 47px 46px;
+  }
 }
 .pick-friend-content-header {
   font-weight: 400;
@@ -136,6 +207,11 @@ a {
   color: #FE9013;
   text-align: center;
   margin-left: -11px;
+}
+@media screen and (max-width: 1280px) {
+  .pick-friend-content-header {
+    margin-bottom: 13px;
+  }
 }
 .pick-friend-content-paragraph1 {
   font-weight: 400;
@@ -146,6 +222,12 @@ a {
   margin-bottom: 56px;
   text-align: left;
 }
+@media screen and (max-width: 1280px) {
+  .pick-friend-content-paragraph1 {
+    margin-bottom: 13px;
+    margin-top: 11px;
+  }
+}
 .pick-friend-message {
   font-weight: 400;
   font-size: 36px;
@@ -153,6 +235,12 @@ a {
   color: #FFFFFF;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 1280px) {
+  .pick-friend-message {
+    max-width: 773px;
+    margin-bottom: 30px;
+  }
 }
 .pick-friend-message-info {
   font-weight: 400;
@@ -162,12 +250,24 @@ a {
   margin-bottom: 42px;
   letter-spacing: 0.1px;
 }
+@media screen and (max-width: 1280px) {
+  .pick-friend-message-info {
+    letter-spacing: 0.1px;
+  }
+}
 .pick-friend-header {
   font-weight: 400;
   font-size: 36px;
   line-height: 130%;
   color: #FE9013;
   margin-bottom: 60px;
+}
+@media screen and (max-width: 1280px) {
+  .pick-friend-header {
+    margin-bottom: 40px;
+    letter-spacing: -1.3px;
+    font-size: 39px;
+  }
 }
 
 .arrow {
@@ -243,6 +343,11 @@ a {
   padding: 41px 0 36px;
   justify-content: space-between;
 }
+@media screen and (max-width: 1280px) {
+  .footer-line1 {
+    padding: 41px 31px 36px 0;
+  }
+}
 .footer-line2 {
   display: flex;
   margin-top: 44px;
@@ -256,6 +361,11 @@ a {
   line-height: 120%;
   color: #FFFFFF;
   display: block;
+}
+@media screen and (max-width: 1280px) {
+  .subscribe-header {
+    letter-spacing: 0.6px;
+  }
 }
 .subscribe-input {
   width: 228px;
@@ -347,6 +457,11 @@ a {
   color: #FFFFFF;
   transition: all ease-in-out 200ms;
 }
+@media screen and (max-width: 1280px) {
+  .footer-designed {
+    letter-spacing: 0.2px;
+  }
+}
 .footer-designed:hover {
   color: #4B9200;
 }
@@ -370,12 +485,22 @@ a {
   margin-top: 30px;
   text-align: center;
 }
+@media screen and (max-width: 1280px) {
+  .share-link {
+    letter-spacing: 0.6px;
+  }
+}
 
 .diet {
   display: flex;
   gap: 64px;
   justify-content: center;
   margin-bottom: 48px;
+}
+@media screen and (max-width: 1280px) {
+  .diet {
+    margin-top: 58px;
+  }
 }
 .diet-number {
   display: flex;
@@ -389,11 +514,21 @@ a {
 .diet-number-info {
   margin-left: -23px;
 }
+@media screen and (max-width: 1280px) {
+  .diet-number-info {
+    letter-spacing: 0.6px;
+  }
+}
 .diet-number-wrapper {
   display: flex;
   gap: 60px;
   justify-content: end;
   align-items: center;
+}
+@media screen and (max-width: 1280px) {
+  .diet-number-wrapper {
+    gap: 65px;
+  }
 }
 .diet-number-wrapper img {
   margin-top: 10px;
@@ -425,6 +560,12 @@ a {
   background-position: center center;
   background-repeat: no-repeat;
   padding: 0 12px;
+}
+@media screen and (max-width: 1280px) {
+  .amount-inputs {
+    margin: 0 auto;
+    padding: 0 0;
+  }
 }
 
 .amount-input {
@@ -461,6 +602,12 @@ a {
   line-height: 140%;
   color: #333B41;
 }
+@media screen and (max-width: 1280px) {
+  .amount-values {
+    margin-left: -15px;
+    margin-right: -42px;
+  }
+}
 .amount-values label {
   width: 12.5%;
   text-align: center;
@@ -470,6 +617,25 @@ a {
 }
 .amount-values-active {
   color: #FE9013;
+}
+
+@media screen and (max-width: 1280px) {
+  .amount-range {
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .amount-input[id=amount-5000] {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  label[for=amount-5000] {
+    display: none;
+  }
 }
 
 .another-amount {
@@ -529,7 +695,6 @@ a {
 
 .dollar {
   position: absolute;
-  position: absolute;
-  top: 14px;
-  left: 600px;
+  left: calc(50% + 115px);
+  top: 15px;
 }/*# sourceMappingURL=style.css.map */
