@@ -30,7 +30,12 @@
     background-size: cover;
     background-position: 0px -120px;
     min-height: 467px;
-    position: relative;  
+    position: relative;
+    @media screen and (max-width:1280px) {
+      min-height: 470px;
+      background-position: -184px -124px;      
+      background-size: 164%;
+    }  
   }
   
   .header {
@@ -39,6 +44,7 @@
   
     &-container{
       display: flex;
+      position: relative;
       justify-content: space-between;
       align-items: center;
       padding: 14px 0;
@@ -51,17 +57,34 @@
     justify-content: space-between;
   
     &-list{
-      display: flex;    
+      display: flex;
+      @media screen and (max-width: 1280px){
+        padding-left: 34px;
+      }
+      @media screen and (max-width: 980px){
+        padding-left: 0;
+      }
+      @media screen and (max-width: 768px){
+        display: none;
+      }
     }
   
     &-list-item {
       list-style: none;
-      margin-right: 58px; 
+      margin-right: 58px;
+      @media screen and (max-width: 1280px) {
+        margin-right: 52px;
+        letter-spacing: 0.01em;
+      }
+      
     }
   
     &-list-item-link {
       @include fontProperty(500, 16px, 140%, $font-color5);
       transition: all 200ms ease-in-out;
+      @media screen and (max-width: 980px) {
+        font-size: 14px;
+      }      
   
       &:hover {
         color: $font-color2;
@@ -90,6 +113,16 @@
   .designed {
     @include fontProperty(500, 16px, 140%, $font-color5);
     transition: all ease-in-out 200ms;
+    @media screen and (max-width: 1280px) {
+      font-size: 16.5px;
+      letter-spacing: 0.03em;  
+    }
+    @media screen and (max-width: 980px) {
+      font-size: 14px;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   
     &:hover {
       color: $font-color2;
@@ -100,6 +133,13 @@
     max-width: 1160px;
     width: 100%;
     margin: 0 auto;
+    @media screen and(max-width:1280px){
+      max-width: 940px;
+    }
+    @media screen and(max-width:980px){
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
   
   .button {
@@ -133,46 +173,69 @@
     opacity: 0.9;
     padding-top: 40px;
     padding-bottom: 184px;
+    @media screen and(max-width:1280px){
+      padding-bottom: 30px;
+    }
   
     &-content {
       background: rgba(253, 253, 255, 0.52);
       backdrop-filter: blur(2px);
       border-radius: 20px;
       padding: 41px 92px 59px;
-  
+      @media screen and(max-width:1280px){
+        padding: 19px 47px 46px;
+      }  
       &-header {
         @include fontProperty (400, 48px, 120%,$font-color2);
         text-align: center;
-        margin-left: -11px;      
-      }
-  
+        margin-left: -11px;
+        @media screen and(max-width:1280px){
+          margin-bottom: 13px;
+          // letter-spacing: 1.9px;
+        }  
+      }  
       &-paragraph1 {
         @include fontProperty(400, 24px, 120%, $font-color1);
         margin-top: 25px;
         margin-bottom: 56px;
         text-align: left;
-      }
-  
+        @media screen and(max-width:1280px){
+          margin-bottom: 13px;
+          margin-top: 11px;
+        } 
+      }  
     }
 
-    &-message{
-        @include fontProperty(400, 36px, 130%, $font-color5);
-        text-transform: uppercase;
-        margin-bottom: 10px;
-
-        &-info {
-            @include fontProperty(400, 16px, 140%, $font-color5);
-            margin-bottom: 42px;
-            letter-spacing: 0.1px
-        }
-
+    &-message {
+      @include fontProperty(400, 36px, 130%, $font-color5);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      @media screen and (max-width:1280px){
+        max-width: 773px;
+        margin-bottom: 30px;
+        // letter-spacing: -0.99px;
+      }
+      &-info {
+          @include fontProperty(400, 16px, 140%, $font-color5);
+          margin-bottom: 42px;
+          letter-spacing: 0.1px;
+          @media screen and (max-width:1280px){
+            letter-spacing: 0.1px;
+          }
+      }
     }
 
     &-header {
         @include fontProperty(400, 36px, 130%, $font-color2);
         margin-bottom: 60px;
+        @media screen and(max-width:1280px){
+          margin-bottom: 40px;
+          letter-spacing: -1.3px;
+          font-size: 39px;
+        }
     }
   }
+
   
   .arrow {
     align-self: baseline;
@@ -243,6 +306,9 @@
       display: flex;
       padding: 41px 0 36px;
       justify-content: space-between;
+      @media screen and (max-width: 1280px){
+        padding: 41px 31px 36px 0;
+      }
     }
   
     &-line2 {
@@ -254,11 +320,13 @@
   
   }
   
-  .subscribe {
-  
+  .subscribe {  
     &-header {
       @include fontProperty(400, 24px, 120%, $font-color5);
       display: block;
+      @media screen and (max-width:1280px) {
+        letter-spacing: 0.6px;  
+      }
     }
   
     &-input {
@@ -358,6 +426,9 @@
   .footer-designed {
     @include fontProperty(100, 16px, 130%, $font-color5 );
     transition: all ease-in-out 200ms;
+    @media screen and (max-width: 1280px) {
+      letter-spacing: 0.2px;
+    }
   
     &:hover {
       color: #4B9200;
@@ -369,7 +440,10 @@
   }
   
   .footer-nav-list-item-link{
-    @include fontProperty(400, 16px, 140%, $font-color5)
+    @include fontProperty(400, 16px, 140%, $font-color5);
+    // @media screen and (max-width: 980px) {
+    //   font-size: 14px;
+    // }
   }
 
   .share-link {
@@ -377,6 +451,9 @@
     display: block;
     margin-top: 30px;
     text-align: center;
+    @media screen and (max-width:1280px) {
+      letter-spacing: 0.6px;
+    }
   }
 
   .diet {
@@ -384,6 +461,9 @@
     gap: 64px;
     justify-content: center;
     margin-bottom: 48px;
+    @media screen and (max-width: 1280px){
+      margin-top: 58px;
+    }
 
     &-number {
       display: flex;
@@ -396,6 +476,9 @@
 
       &-info {
         margin-left: -23px;
+        @media screen and (max-width: 1280px) {
+          letter-spacing: 0.6px;
+        }        
       }
 
       &-wrapper {
@@ -403,6 +486,9 @@
         gap: 60px;
         justify-content: end;
         align-items: center;
+        @media screen and (max-width:1280px) {
+          gap: 65px;
+        }
 
         & img {
           margin-top: 10px;
@@ -433,6 +519,11 @@
     background-position: center center;
     background-repeat: no-repeat;
     padding: 0 12px;
+    @media screen and (max-width: 1280px) {
+      // width: 96.5%;
+      margin: 0 auto;
+      padding: 0 0;  
+    }
   }
 
   .amount-input {
@@ -467,6 +558,10 @@
     padding-left: 0;
     padding-right: 0px;
     @include fontProperty(500, 26px, 140%,  #333B41);
+    @media screen and (max-width: 1280px) {
+      margin-left: -15px;
+      margin-right: -42px;
+    }
 
     & label {
       width: 12.5%;
@@ -479,6 +574,24 @@
 
     &-active {
       color:#FE9013;
+    }
+  }
+
+  .amount-range {
+    @media screen and (max-width: 1280px) {
+      padding: 0 20px;
+      margin: 0 auto;
+      // width: 96%;
+    }
+  }
+  .amount-input[id=amount-5000]{
+    @media screen and (max-width: 1280px) {
+      display: none;
+    }
+  }
+  label[for=amount-5000]{
+    @media screen and (max-width: 1280px) {
+      display: none;
     }
   }
 
@@ -537,9 +650,9 @@
     position: relative;
   }
 
-  .dollar {
+  .dollar {    
     position: absolute;
-    position: absolute;
-    top: 14px;
-    left: 600px;
+    left: calc(100%/2 + 115px);
+    top: 15px;
   }
+

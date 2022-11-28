@@ -11,21 +11,27 @@ let petsArr = [{
     "meal": "../../assets/logo/meet-fish_icon.svg"
   },
   {
+    "name": "cheetahs",
+    "img": "../../assets/img/cheetahs.jpg",
+    "native": "Native to Africa",
+    "meal": "../../assets/logo/meet-fish_icon.svg"
+  },
+  {
     "name": "gorillas",
     "img": "../../assets/img/gorillas.jpg",
     "native": "Native to Congo",
     "meal": "../../assets/logo/banana-bamboo_icon.svg"
   },
+  // {
+  //   "name": "two-toes sloth",
+  //   "img": "../../assets/img/two-toes.jpg",
+  //   "native": "Mesoamerica, South America",
+  //   "meal": "../../assets/logo/banana-bamboo_icon.svg"
+  // },
   {
-    "name": "two-toes sloth",
-    "img": "../../assets/img/two-toes.jpg",
-    "native": "Mesoamerica, South America",
-    "meal": "../../assets/logo/banana-bamboo_icon.svg"
-  },
-  {
-    "name": "cheetahs",
-    "img": "../../assets/img/cheetahs.jpg",
-    "native": "Native to Africa",
+    "name": "alligators",
+    "img": "../../assets/img/aligators.jpg",
+    "native": "Native to Southeastern U. S.",
     "meal": "../../assets/logo/meet-fish_icon.svg"
   },
   {
@@ -33,8 +39,7 @@ let petsArr = [{
     "img": "../../assets/img/penguins.jpg",
     "native": "Native to Antarctica",
     "meal": "../../assets/logo/meet-fish_icon.svg"
-  },
-  
+  },  
 ]
 
 let testimonials = [
@@ -53,11 +58,18 @@ let testimonials = [
     "comment": "Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. <br> The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for "
   },
   {
+    "author": "Oska Samborska",
+    "place": "Local Austria",
+    "day": "Yesterday",
+    "photo": "../../assets/img/oska.png",
+    "comment": " Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals."
+  },
+  {
     "author": "Fredericka Michelin",
     "place": "Local Austria",
     "day": "Yesterday",
-    "photo": "../../assets/img/michelin.jpg",
-    "comment": "The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. <br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met.<br>The best online zoo I’ve met. My son delighted very much ljves to "
+    "photo": "../../assets/img/michelin.png",
+    "comment": " My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals."
   },
   {
     "author": "Mila Riksha",
