@@ -26,6 +26,13 @@ a {
     background-size: 164%;
   }
 }
+@media screen and (max-width: 768px) {
+  .first-block {
+    min-height: 369px;
+    background-position: -252px -120px;
+    background-size: 207%;
+  }
+}
 
 .header {
   background-color: rgb(0, 0, 0);
@@ -36,6 +43,12 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 14px 0;
+}
+@media screen and (max-width: 768px) {
+  .header-container {
+    padding: 0 20px;
+    background-color: #111115;
+  }
 }
 
 .nav {
@@ -106,6 +119,17 @@ a {
   background-position: 8px 24.6px;
   margin-right: 63px;
 }
+@media screen and (max-width: 768px) {
+  .petStory-logo {
+    font-size: 12.2899px;
+    border: none;
+    background-size: 9%;
+    background-position: 22px 14.6px;
+    line-height: 110%;
+    height: auto;
+    margin-left: -17px;
+  }
+}
 
 .designed {
   font-weight: 500;
@@ -144,12 +168,6 @@ a {
     max-width: 940px;
   }
 }
-@media screen and (max-width: 980px) {
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
 
 .button {
   font-weight: 500;
@@ -185,7 +203,12 @@ a {
 }
 @media screen and (max-width: 1280px) {
   .pick-friend {
-    padding-bottom: 30px;
+    padding: 40px 20px 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pick-friend {
+    padding: 30px 20px;
   }
 }
 .pick-friend-content {
@@ -200,6 +223,11 @@ a {
     padding: 19px 47px 46px;
   }
 }
+@media screen and (max-width: 768px) {
+  .pick-friend-content {
+    padding: 35px 0px 46px;
+  }
+}
 .pick-friend-content-header {
   font-weight: 400;
   font-size: 48px;
@@ -211,6 +239,13 @@ a {
 @media screen and (max-width: 1280px) {
   .pick-friend-content-header {
     margin-bottom: 13px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pick-friend-content-header {
+    margin-left: 0;
+    letter-spacing: 0;
+    margin-left: 0;
   }
 }
 .pick-friend-content-paragraph1 {
@@ -228,6 +263,16 @@ a {
     margin-top: 11px;
   }
 }
+@media screen and (max-width: 768px) {
+  .pick-friend-content-paragraph1 {
+    margin-bottom: -8px;
+    margin-top: 21px;
+    padding: 0 19px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 113%;
+  }
+}
 .pick-friend-message {
   font-weight: 400;
   font-size: 36px;
@@ -242,17 +287,27 @@ a {
     margin-bottom: 30px;
   }
 }
+@media screen and (max-width: 768px) {
+  .pick-friend-message {
+    max-width: 773px;
+    margin-bottom: 19px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #FFFFFF;
+  }
+}
 .pick-friend-message-info {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 140%;
   color: #FFFFFF;
   margin-bottom: 42px;
   letter-spacing: 0.1px;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 768px) {
   .pick-friend-message-info {
-    letter-spacing: 0.1px;
+    margin-bottom: 26px;
   }
 }
 .pick-friend-header {
@@ -265,8 +320,12 @@ a {
 @media screen and (max-width: 1280px) {
   .pick-friend-header {
     margin-bottom: 40px;
-    letter-spacing: -1.3px;
-    font-size: 39px;
+    letter-spacing: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pick-friend-header {
+    margin-bottom: 28px;
   }
 }
 
@@ -337,6 +396,19 @@ a {
 .footer {
   background-color: #111115;
   padding-bottom: 50px;
+  position: relative;
+}
+.footer-container {
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .footer-nav-list {
+    display: block;
+    left: 21px;
+    display: block;
+    position: absolute;
+    display: flex;
+  }
 }
 .footer-line1 {
   display: flex;
@@ -348,6 +420,12 @@ a {
     padding: 41px 31px 36px 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .footer-line1 {
+    padding: 0;
+    margin-bottom: 32px;
+  }
+}
 .footer-line2 {
   display: flex;
   margin-top: 44px;
@@ -355,17 +433,17 @@ a {
   align-items: flex-end;
 }
 
+@media screen and (max-width: 768px) {
+  .subscribe {
+    display: none;
+  }
+}
 .subscribe-header {
   font-weight: 400;
   font-size: 24px;
   line-height: 120%;
   color: #FFFFFF;
   display: block;
-}
-@media screen and (max-width: 1280px) {
-  .subscribe-header {
-    letter-spacing: 0.6px;
-  }
 }
 .subscribe-input {
   width: 228px;
@@ -415,6 +493,13 @@ a {
   gap: 4px;
   width: 25%;
 }
+@media screen and (max-width: 768px) {
+  .social-media {
+    position: absolute;
+    right: 20px;
+    bottom: 106px;
+  }
+}
 .social-media-item {
   display: block;
   align-items: center;
@@ -448,6 +533,11 @@ a {
   vertical-align: super;
   margin-left: 12px;
   transition: all ease-in-out 200ms;
+}
+@media screen and (max-width: 768px) {
+  .social-media-link {
+    display: none;
+  }
 }
 
 .footer-designed {
@@ -485,12 +575,6 @@ a {
   margin-top: 30px;
   text-align: center;
 }
-@media screen and (max-width: 1280px) {
-  .share-link {
-    letter-spacing: 0.6px;
-  }
-}
-
 .diet {
   display: flex;
   gap: 64px;
@@ -500,6 +584,11 @@ a {
 @media screen and (max-width: 1280px) {
   .diet {
     margin-top: 58px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .diet {
+    margin-bottom: 41px;
   }
 }
 .diet-number {
@@ -517,6 +606,11 @@ a {
 @media screen and (max-width: 1280px) {
   .diet-number-info {
     letter-spacing: 0.6px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .diet-number-info {
+    letter-spacing: 0;
   }
 }
 .diet-number-wrapper {
@@ -547,9 +641,16 @@ a {
   color: #000000;
   margin-bottom: 17px;
 }
+@media screen and (max-width: 768px) {
+  .amount-header {
+    margin-left: 10px;
+    margin-bottom: 7px;
+  }
+}
 
 .amount-inputs {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -565,9 +666,45 @@ a {
   .amount-inputs {
     margin: 0 auto;
     padding: 0 0;
+    background: #404950;
+  }
+}
+@media screen and (max-width: 768px) {
+  .amount-inputs {
+    margin: 0 auto;
+    padding: 0 20px;
+    background: #404950;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .amount-inputs::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 40px;
+    height: 100%;
+    width: calc(100% - 80px);
+    background: url(../../assets/img/Rectangle12.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .amount-inputs::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 20px;
+    height: 100%;
+    width: calc(100% - 40px);
+    background: url(../../assets/img/Rectangle12.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
 .amount-input {
   width: 40px;
   height: 40px;
@@ -577,6 +714,8 @@ a {
   background-repeat: no-repeat;
   -webkit-appearance: none;
   transition: all 200ms ease-in-out;
+  position: relative;
+  z-index: 2;
 }
 .amount-input:hover {
   background: url(../../assets/img/Ellipse9.svg), url(../../assets/img/roller_icon.svg);
@@ -608,6 +747,12 @@ a {
     margin-right: -42px;
   }
 }
+@media screen and (max-width: 768px) {
+  .amount-values {
+    margin-left: 8px;
+    margin-right: 6px;
+  }
+}
 .amount-values label {
   width: 12.5%;
   text-align: center;
@@ -625,15 +770,24 @@ a {
     margin: 0 auto;
   }
 }
-
-@media screen and (max-width: 1280px) {
-  .amount-input[id=amount-5000] {
-    display: none;
+@media screen and (max-width: 768px) {
+  .amount-range {
+    padding: 0 0;
   }
 }
 
 @media screen and (max-width: 1280px) {
-  label[for=amount-5000] {
+  .amount-input[id=amount-5000],
+label[for=amount-5000] {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .amount-input[id=amount-2000],
+label[for=amount-2000],
+.amount-input[id=amount-1000],
+label[for=amount-1000] {
     display: none;
   }
 }
@@ -652,6 +806,13 @@ a {
   font-size: 16px;
   line-height: 140%;
   color: #929699;
+}
+@media screen and (max-width: 768px) {
+  .another-amount {
+    width: 180px;
+    height: 42px;
+    margin: 50px auto 32px;
+  }
 }
 .another-amount::-webkit-outer-spin-button, .another-amount::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -697,4 +858,24 @@ a {
   position: absolute;
   left: calc(50% + 115px);
   top: 15px;
+}
+@media screen and (max-width: 768px) {
+  .dollar {
+    left: calc(50% + 72px);
+    top: 10px;
+  }
+}
+
+.burger-button {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .burger-button {
+    display: block;
+    background-color: #BDBDBD;
+    width: 25px;
+    height: 25px;
+    top: 0px;
+    left: 0px;
+  }
 }/*# sourceMappingURL=style.css.map */
