@@ -59,11 +59,6 @@ a {
 .nav-list {
   display: flex;
 }
-@media screen and (max-width: 1280px) {
-  .nav-list {
-    padding-left: 34px;
-  }
-}
 @media screen and (max-width: 980px) {
   .nav-list {
     padding-left: 0;
@@ -80,7 +75,7 @@ a {
 }
 @media screen and (max-width: 1280px) {
   .nav-list-item {
-    margin-right: 52px;
+    margin-right: 48px;
     letter-spacing: 0.01em;
   }
 }
@@ -137,12 +132,6 @@ a {
   line-height: 140%;
   color: #FFFFFF;
   transition: all ease-in-out 200ms;
-}
-@media screen and (max-width: 1280px) {
-  .designed {
-    font-size: 16.5px;
-    letter-spacing: 0.03em;
-  }
 }
 @media screen and (max-width: 980px) {
   .designed {
@@ -303,7 +292,11 @@ a {
   line-height: 140%;
   color: #FFFFFF;
   margin-bottom: 42px;
-  letter-spacing: 0.1px;
+}
+@media screen and (max-width: 1280px) {
+  .pick-friend-message-info {
+    margin-bottom: 45px;
+  }
 }
 @media screen and (max-width: 768px) {
   .pick-friend-message-info {
@@ -398,8 +391,15 @@ a {
   padding-bottom: 50px;
   position: relative;
 }
-.footer-container {
-  padding: 20px;
+@media screen and (max-width: 768px) {
+  .footer-container {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .footer-nav-list {
+    margin-left: 44px;
+  }
 }
 @media screen and (max-width: 768px) {
   .footer-nav-list {

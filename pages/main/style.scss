@@ -91,7 +91,7 @@ $font-color5: #FFFFFF;
   justify-content: space-between;
 
   &-list{
-    display: flex;    
+    display: flex; 
   }
 
   &-list-item {
@@ -455,8 +455,7 @@ $font-color5: #FFFFFF;
       @include fontProperty(500, 16px, 130%, $font-color1);
       margin-bottom: 10px;
       @media screen and (max-width: 1280px) {
-        font-size: 13px;
-        word-spacing: 0.02em;
+        font-size: 16px;
         margin-top: -21px;
         margin-right: 86px;
         margin-bottom: 10px;
@@ -467,9 +466,8 @@ $font-color5: #FFFFFF;
       @include fontProperty(400, 16px, 130%, $font-color1);
       max-width: 863px;
       @media screen and (max-width: 1280px) {
-        font-size: 13px;
+        font-size: 16px;
         max-width: 842px;
-        letter-spacing: 0.004em;
       }
     }
     
@@ -493,7 +491,7 @@ $font-color5: #FFFFFF;
   margin-bottom: 40px;
   text-align: center;
   @media screen and (max-width: 1280px){
-    margin-top: 36px;
+    margin-top: 40px;
   }
 }
 
@@ -653,7 +651,7 @@ $font-color5: #FFFFFF;
   }
 
   &-input {
-    width: 228px;
+    width: 226px;
     height: 42px;
     border: 0.7px solid rgba(249, 128, 75, 1);
     padding: 10px 7px 10px 10px;
@@ -702,6 +700,9 @@ $font-color5: #FFFFFF;
   flex-direction: column;
   gap: 4px;
   width: 25%;
+  @media screen and (max-width: 1280px) {
+    gap: 5px;
+  }
 
   &-item {
     display: block;
@@ -739,6 +740,9 @@ $font-color5: #FFFFFF;
     vertical-align: super;
     margin-left: 12px;
     transition: all ease-in-out 200ms;
+    @media screen and (max-width: 1280px) {
+      margin-left: 9px;
+    }
   }  
 
 }
@@ -758,6 +762,18 @@ $font-color5: #FFFFFF;
 
 .footer-nav-list-item-link{
   @include fontProperty(400, 16px, 140%, $font-color5)
+}
+.footer-nav-list{
+  @media screen and (max-width: 1280px) {
+      justify-content: space-between;
+      width: 332px;
+      margin-left: -35px;
+    }
+}
+.footer-nav-list .nav-list-item{
+  @media screen and (max-width: 1280px) {
+      margin-right: 0;
+    }
 }
 
 input[type=range].styled-slider {  

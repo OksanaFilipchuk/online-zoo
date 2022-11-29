@@ -480,8 +480,7 @@ a {
 }
 @media screen and (max-width: 1280px) {
   .pick-friend-content-paragraph2 {
-    font-size: 13px;
-    word-spacing: 0.02em;
+    font-size: 16px;
     margin-top: -21px;
     margin-right: 86px;
     margin-bottom: 10px;
@@ -496,9 +495,8 @@ a {
 }
 @media screen and (max-width: 1280px) {
   .pick-friend-content-paragraph3 {
-    font-size: 13px;
+    font-size: 16px;
     max-width: 842px;
-    letter-spacing: 0.004em;
   }
 }
 
@@ -525,7 +523,7 @@ a {
 }
 @media screen and (max-width: 1280px) {
   .how-it-work-header {
-    margin-top: 36px;
+    margin-top: 40px;
   }
 }
 
@@ -700,7 +698,7 @@ a {
   display: block;
 }
 .subscribe-input {
-  width: 228px;
+  width: 226px;
   height: 42px;
   border: 0.7px solid rgb(249, 128, 75);
   padding: 10px 7px 10px 10px;
@@ -747,6 +745,11 @@ a {
   gap: 4px;
   width: 25%;
 }
+@media screen and (max-width: 1280px) {
+  .social-media {
+    gap: 5px;
+  }
+}
 .social-media-item {
   display: block;
   align-items: center;
@@ -781,6 +784,11 @@ a {
   margin-left: 12px;
   transition: all ease-in-out 200ms;
 }
+@media screen and (max-width: 1280px) {
+  .social-media-link {
+    margin-left: 9px;
+  }
+}
 
 .footer-designed {
   font-weight: 100;
@@ -801,6 +809,20 @@ a {
   font-size: 16px;
   line-height: 140%;
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 1280px) {
+  .footer-nav-list {
+    justify-content: space-between;
+    width: 332px;
+    margin-left: -35px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .footer-nav-list .nav-list-item {
+    margin-right: 0;
+  }
 }
 
 input[type=range].styled-slider {
