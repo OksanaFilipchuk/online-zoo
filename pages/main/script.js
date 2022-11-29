@@ -155,3 +155,4 @@ document.querySelectorAll(".nav-list-item-link").forEach(el=>
 
 window.addEventListener('DOMContentLoaded', showCards);
 window.addEventListener('DOMContentLoaded', showTestimonials);
+alert("Please, check my work on Friday-Saturday. We have electricity a few hours a day(")
