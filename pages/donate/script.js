@@ -14,3 +14,4 @@ document.querySelectorAll(".amount-input").forEach((el) => {
     }
   })  
 })
+alert("Please, check my work on Friday-Saturday. We have electricity a few hours a day(")
