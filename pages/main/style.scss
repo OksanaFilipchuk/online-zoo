@@ -30,9 +30,13 @@ $font-color5: #FFFFFF;
   background-size: cover;
   min-height: 780px;
   position: relative;
-  @media screen and (max-width:1280px){
+  @media screen and (max-width: 1280px){
     min-height: 584px;
     background-position-x: -100px;
+  }
+  @media screen and (max-width: 768px){
+    min-height: 373px;
+    background-position-x: -63px;
   }
 
   &-header {    
@@ -47,12 +51,18 @@ $font-color5: #FFFFFF;
     text-align: center;
     text-transform: uppercase;
     position: relative;
-
     @media screen and (max-width: 1280px){
       font-size: 85px;
       top: 31px;
       right: 6px;
       gap: 41px;
+    }
+    @media screen and (max-width: 768px){
+      width: 255px;
+      height: 204px;
+      top: 37px;
+      right: -4px;
+      font-size: 54.3px;      
     }
 
     &-wrapper{
@@ -61,6 +71,9 @@ $font-color5: #FFFFFF;
       left: auto;
       top: 12px;
       min-height: 487px;
+      @media screen and (max-width: 768px) {
+        min-height: 204px;
+      }
     }
 
     &-colored{
@@ -82,6 +95,9 @@ $font-color5: #FFFFFF;
     justify-content: space-between;
     align-items: center;
     padding: 14px 0;
+    @media screen and (max-width: 768px) {
+      padding: 0 0;
+    }
   }
 }
 
@@ -91,7 +107,10 @@ $font-color5: #FFFFFF;
   justify-content: space-between;
 
   &-list{
-    display: flex; 
+    display: flex;
+    @media screen and (max-width: 768px ) {
+      display: none;
+    }
   }
 
   &-list-item {
@@ -128,11 +147,23 @@ $font-color5: #FFFFFF;
   background-repeat: no-repeat;
   background-position: 8px 24.6px;
   margin-right: 63px;
+  @media screen and (max-width: 768px) {
+    font-size: 12.2899px;
+    border: none;
+    background-size: 9%;
+    background-position: 22px 14.6px;
+    line-height: 110%;
+    height: auto;
+    margin-left: -17px;
+  }
 }
 
 .designed {
   @include fontProperty(500, 16px, 140%, $font-color5);
   transition: all ease-in-out 200ms;
+  @media screen and (max-width: 768px ) {
+    display: none;
+  }
 
   &:hover {
     color: $font-color2;
@@ -187,10 +218,18 @@ $font-color5: #FFFFFF;
   &-centred {
     margin: 0 auto;
     border-radius: 25px;
+    @media screen and (max-width: 768px){
+      margin-left: -137%;
+      margin-top: -49px;
+    }
   }
 
   &-left {
     border-radius: 5px;
+  }
+
+  &-pets {
+    margin: 0 auto;
   }
 }
 
@@ -208,6 +247,12 @@ $font-color5: #FFFFFF;
     top: -23px;
     left: -13px;
   }
+  @media screen and(max-width: 768px){
+    width: 237px;
+    height: 237px;
+    top: -1px;
+    left: -35px;
+  }
 }
 
 .backstage {
@@ -220,17 +265,27 @@ $font-color5: #FFFFFF;
     padding-top: 100px;
     padding-bottom: 142px;
     background-image: none;
-    // background-image: linear-gradient(to right, rgb(255, 0, 0, 0.5), rgb(0, 0, 0, 1)), url("../../assets/img/flower_foto1.jpg");
-    // background-position: right, right 10px;
-    // background-repeat: no-repeat, no-repeat;
   }
-  
+  @media screen and (max-width: 768px) {
+    padding-top: 61px;
+    background-image: url(../../assets/img/flower_foto1.jpg);
+    background-position: 108% -7px;
+    background-repeat: no-repeat;
+    background-size: 26%;
+    padding-bottom: 80px;
+  }
 
   &-container {
     display: flex;
     gap: 87px;
     @media screen and (max-width: 1280px ) {
       gap: 31px;    
+    }
+  }
+
+  &-content {
+    @media screen and (max-width: 768px ) {
+    width: 495px;
     }
   }
 
@@ -244,11 +299,17 @@ $font-color5: #FFFFFF;
       object-fit: cover;
       margin-top: 9px;
     }
+    @media screen and (max-width: 768px ) {
+      display: none;
+    }
   }
 
   &-header {
     @include fontProperty(400, 48px, 120%, $font-color1); 
     margin: 0 0 20px 0;
+    @media screen and (max-width: 1280px) {
+      margin: 0 0 20px 4px;    
+    }
   }
 
   &-paragraph {
@@ -261,6 +322,9 @@ $font-color5: #FFFFFF;
   h3 {
     @include fontProperty(400, 24px, 120%, $font-color1);
     margin: 54px 0 34px 0;
+    @media screen and (max-width: 768px) {
+    margin: 29px 0 20px 3px;
+    }
   }
 }
 
@@ -278,7 +342,15 @@ $font-color5: #FFFFFF;
     background-position: left bottom, right bottom;
     background-repeat: no-repeat, no-repeat;
     background-size: 19.5%, 24%;;
-  } 
+  }
+  @media screen and (max-width: 768px) {
+    gap: 60px;
+    padding-bottom: 100px;
+    background: url(../../assets/img/palm_foto.jpg), url(../../assets/img/strelitzia.jpg);
+    background-size: 19.5%, 24%;
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
+  }
 }
 
 .pets-carousel {
@@ -306,12 +378,20 @@ $font-color5: #FFFFFF;
         top: 369px;
         left: 350px;
       }
+      @media screen and (max-width: 768px) {
+        top: 342px;
+        left: 243px;
+      }
     }
     &-right {
       @media screen and (max-width: 1280px) {
         position: absolute;
         top: 369px;
         right: 350px;
+        @media screen and (max-width: 768px) {
+          top: 342px;
+          right: 243px;
+        }
       }
     }
 
@@ -325,6 +405,13 @@ $font-color5: #FFFFFF;
   
   }
   
+}
+.carousel-wrapper{
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 756px;
+    overflow: hidden;
+  }
 }
 
 .pet-cards {
@@ -355,6 +442,10 @@ $font-color5: #FFFFFF;
     width: 295px;
     height: 354px;
   }
+  @media screen and (max-width: 768px) {
+    width: 285px;
+    height: 332px;
+  } 
 
   &-img {    
     width: 100%;
@@ -362,6 +453,9 @@ $font-color5: #FFFFFF;
     transition: all 300ms ease-in-out;
     @media screen and (max-width: 1280px) {
       margin-top: -10px;      
+    }
+    @media screen and (max-width: 768px) {
+      margin-top: 0;      
     }
 
     &-active{
@@ -378,6 +472,9 @@ $font-color5: #FFFFFF;
     @media screen and (max-width: 1280px) {
       top: 293px;      
     }
+    @media screen and (max-width: 768px) {
+      top: 275px;      
+    }
   }
 
   &-content-active {
@@ -392,20 +489,31 @@ $font-color5: #FFFFFF;
   &-meal {
     position: absolute;
     right: 13px;
-    bottom: 10px
+    bottom: 10px;
+    @media screen and (max-width: 768px) {
+      right: 5px;
+      bottom: 7px;
+    }
   }
 
   h3 {
     @include fontProperty(500, 16px, 140%, #000000);
     margin-left: 16px;
     margin-top: 8px;    
-    text-transform: uppercase;    
+    text-transform: uppercase;
+    @media screen and (max-width: 768px) {
+      font-size: 12.3px; 
+      margin-top: 15px;     
+    }    
   }
 
   h6 {
     @include fontProperty(300, 15px, 120%, #000000);
     margin-left: 16px;
     margin-bottom: 14px;
+    @media screen and (max-width: 768px) {
+      font-size: 11.7px;      
+    }
   }
 }
 
@@ -414,8 +522,12 @@ $font-color5: #FFFFFF;
   opacity: 0.9;
   padding-top: 69px;
   padding-bottom: 100px;
-  @media screen and (max-width:1280px) {
+  @media screen and (max-width: 1280px) {
     padding-top: 30px;
+    padding-bottom: 48px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 20px;;
   }
 
   &-content {
@@ -426,11 +538,18 @@ $font-color5: #FFFFFF;
     @media screen and (max-width:1280px) {
       padding: 30px 0 51px 0;
     }
+    @media screen and (max-width:768px) {
+      padding: 9px 0 51px 0;
+    }
 
     &-header {
       @include fontProperty (400, 48px, 120%,$font-color2);
-      text-align: center;      
+      text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size: 42px;
+      }    
     }
+    
 
     &-paragraph1,
     &-paragraph2,
@@ -447,7 +566,10 @@ $font-color5: #FFFFFF;
       margin-bottom: 40px;
       @media screen and (max-width: 1280px) {
         margin-top: 23px;
-        // margin-bottom: 16px;
+      }
+      @media screen and (max-width: 768px) {
+        margin-left: 19px;
+        font-size: 22px;
       }
     }
 
@@ -460,6 +582,11 @@ $font-color5: #FFFFFF;
         margin-right: 86px;
         margin-bottom: 10px;
       }
+      @media screen and (max-width: 768px) {
+        width: calc(100% - 40px);
+        margin-left: 19px;
+        font-size: 16px;
+      }
     }
 
     &-paragraph3 {
@@ -469,6 +596,10 @@ $font-color5: #FFFFFF;
         font-size: 16px;
         max-width: 842px;
       }
+      @media screen and (max-width: 768px) {
+        margin-left: 19px;
+        font-size: 16px;
+      }
     }
     
   }
@@ -477,6 +608,9 @@ $font-color5: #FFFFFF;
 .arrow {
   align-self: baseline;
   margin-top: 60px;
+  @media screen and (max-width: 990px) {
+    display: none;
+  }
 }
 
 .underlined {
@@ -493,6 +627,9 @@ $font-color5: #FFFFFF;
   @media screen and (max-width: 1280px){
     margin-top: 40px;
   }
+  @media screen and (max-width: 768px){
+    margin-top: 29px;
+  }  
 }
 
 .how-it-work-block{
@@ -549,6 +686,7 @@ $font-color5: #FFFFFF;
   background-position: right 136%;
   @media screen and (max-width:1280px) {
     padding-bottom: 140px;
+    margin-top: 101px;
     background-position: right 122%;
     background-size: 12.5em;
   }
@@ -808,4 +946,25 @@ input[type=range].styled-slider::-webkit-slider-runnable-track {
   border-radius: 5px;
   background: #F5F7F6;
   box-shadow: none;
+}
+
+.burger-button {
+  display: none;
+  @media screen and (max-width: 768px){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 19px;
+    height: 11px;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.burger-line1,
+.burger-line2,
+.burger-line3 {
+  width: 100%;
+  height: 2px;
+  background-color: #fcfafa;;;
 }
