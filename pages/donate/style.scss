@@ -124,7 +124,7 @@
     padding: 3.55px 4.75px;
     @include fontProperty(400, 19.0145px, 120%, $font-color5);
     text-align: center;
-    border: 1.18841px solid #FFFFFF;
+    border: 1.18841px solid rgba(255, 255, 255, 0.7);;
     background-image: url(../../assets/logo/bamboo.svg);
     background-repeat: no-repeat;
     background-position: 8px 24.6px;
@@ -151,7 +151,7 @@
       font-size: 19.0145px;
       line-height: 120%;
       color: #FFFFFF;
-      border: 1px solid #ffff;
+      border: 1px solid rgba(255, 255, 255, 0.7);;
       border-radius: 4px;
       @include fontProperty(400, 19.0145px, 120%, $font-color5);
     }
