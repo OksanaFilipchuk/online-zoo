@@ -140,7 +140,23 @@ a {
   margin-right: 58px;
 }
 @media screen and (max-width: 1280px) {
+  .nav-list-item:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-list-item:last-child {
+    margin-right: 36px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav-list-item:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1280px) {
   .nav-list-item {
+    margin-top: auto;
     margin-right: 48px;
   }
 }
@@ -295,7 +311,7 @@ a {
     position: absolute;
     top: 215px;
     width: 298px;
-    left: calc((100vw - 298px) / 2);
+    left: 0;
   }
 }
 
@@ -357,9 +373,11 @@ a {
     padding-bottom: 80px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .backstage {
     padding-bottom: 40px;
+    background-position: 116% 43px;
+    background-size: 22%;
   }
 }
 .backstage-container {
@@ -402,7 +420,7 @@ a {
   color: #333B41;
   margin: 0 0 20px 0;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 768px) {
   .backstage-header {
     margin: 0 0 20px 4px;
   }
@@ -723,7 +741,7 @@ a {
 }
 @media screen and (max-width: 600px) {
   .pick-friend-content {
-    padding: 19px 0 38px 0;
+    padding: 19px 0 40px 0;
   }
 }
 .pick-friend-content-header {
@@ -889,8 +907,8 @@ a {
 @media screen and (max-width: 768px) {
   .how-it-work-block {
     margin-bottom: 38px;
-    margin-right: 31px;
-    margin-left: 20px;
+    margin-right: 23px;
+    margin-left: 11px;
     justify-content: space-between;
   }
 }
@@ -937,10 +955,20 @@ a {
   background-position: center;
   position: relative;
 }
+@media screen and (max-width: 600px) {
+  .how-it-work-action-zoo {
+    margin-top: 5px;
+  }
+}
 .how-it-work-action-dish {
   background: url(../../assets/img/monkey.svg), #FFFFFF;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media screen and (max-width: 600px) {
+  .how-it-work-action-dish {
+    margin-bottom: 11px;
+  }
 }
 .how-it-work-action-descript {
   font-weight: 400;
@@ -978,8 +1006,17 @@ a {
 @media screen and (max-width: 600px) {
   .how-it-work-action-pay::before,
 .how-it-work-action-zoo::before {
-    transform: rotate(86deg);
+    transform: rotate(85deg);
     top: 189px;
+    right: -63px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .how-it-work-action-zoo::before {
+    transform: rotate(86deg);
+    top: 197px;
+    right: -64px;
   }
 }
 
@@ -1063,13 +1100,19 @@ a {
 }
 @media screen and (max-width: 768px) {
   .testimonials-header {
-    font-size: 24px;
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 600px) {
   .testimonials-header {
+    font-size: 36px;
     margin-top: -32px;
     margin-bottom: 19px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .testimonials .button-pets {
+    margin: 0 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1227,7 +1270,7 @@ a {
   .footer-nav-list {
     position: static;
     display: flex;
-    padding: 0 19px;
+    padding: 0 19px 0 32px;
     gap: 30px;
     justify-content: space-evenly;
   }
@@ -1268,11 +1311,12 @@ a {
 
 @media screen and (max-width: 1280px) {
   .subscribe {
-    margin-right: 31px;
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 768px) {
   .subscribe {
+    margin-right: 31px;
     display: none;
   }
 }
@@ -1475,6 +1519,7 @@ input[type=range].styled-slider {
 @media screen and (max-width: 1280px) {
   input[type=range].styled-slider {
     margin: 21px auto 52px;
+    width: 387px;
   }
 }
 @media screen and (max-width: 768px) {
