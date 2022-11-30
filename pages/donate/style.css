@@ -130,7 +130,7 @@ a {
   line-height: 120%;
   color: #FFFFFF;
   text-align: center;
-  border: 1.18841px solid #FFFFFF;
+  border: 1.18841px solid rgba(255, 255, 255, 0.7);
   background-image: url(../../assets/logo/bamboo.svg);
   background-repeat: no-repeat;
   background-position: 8px 24.6px;
@@ -159,7 +159,7 @@ a {
     font-size: 19.0145px;
     line-height: 120%;
     color: #FFFFFF;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 4px;
     font-weight: 400;
     font-size: 19.0145px;
