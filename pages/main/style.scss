@@ -132,7 +132,19 @@ $font-color5: #FFFFFF;
   &-list-item {
     list-style: none;
     margin-right: 58px;
+    &:last-child{
+      @media screen and (max-width: 1280px){
+        margin-right: 0;
+      }
+      @media screen and (max-width: 768px){
+        margin-right: 36px;
+      }
+      @media screen and (max-width: 600px){
+        margin-right: 0;
+      }
+    }
     @media screen and (max-width: 1280px){
+      margin-top: auto;
       margin-right: 48px;
     }
     @media screen and (max-width: 768px) {
@@ -269,7 +281,7 @@ $font-color5: #FFFFFF;
       position: absolute;
       top: 215px;
       width: 298px;
-      left: calc((100vw - 298px)/2);
+      left: 0;
     }
   }
 }
@@ -321,8 +333,10 @@ $font-color5: #FFFFFF;
     background-size: 26%;
     padding-bottom: 80px;
   }
-  @media screen and (max-width: 768px) {    
+  @media screen and (max-width: 600px) {    
     padding-bottom: 40px;
+    background-position: 116% 43px;
+    background-size: 22%;
   }
   
 
@@ -358,12 +372,12 @@ $font-color5: #FFFFFF;
   &-header {
     @include fontProperty(400, 48px, 120%, $font-color1); 
     margin: 0 0 20px 0;
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 768px) {
       margin: 0 0 20px 4px;    
     }
     @media screen and (max-width: 600px) {
       font-size: 24px;
-      margin: 44px 0 9px 0;   
+      margin: 44px 0 9px 0;
     }    
   }
 
@@ -385,7 +399,6 @@ $font-color5: #FFFFFF;
     }
   }
 }
-
 
 .pets {
   display: flex;
@@ -623,7 +636,7 @@ $font-color5: #FFFFFF;
       padding: 9px 0 60px 0;
     }
     @media screen and (max-width: 600px) {
-      padding: 19px 0 38px 0;
+      padding: 19px 0 40px 0;
     }
     &-header {
       @include fontProperty (400, 48px, 120%,$font-color2);
@@ -746,14 +759,15 @@ $font-color5: #FFFFFF;
   }
   @media screen and (max-width: 768px){
     margin-bottom: 38px;
-    margin-right: 31px;
-    margin-left: 20px;
+    margin-right: 23px;
+    margin-left: 11px;
     justify-content: space-between;
   }
   @media screen and (max-width: 600px){
     flex-direction: column;
     align-items: center;
     gap: 35px;
+    
   }  
 }
 
@@ -784,19 +798,25 @@ $font-color5: #FFFFFF;
     background: url(../../assets/img/pay.svg), #FFFFFF;
     background-repeat: no-repeat;
     background-position: center;
-    position: relative;
-    
+    position: relative;    
   }
   &-zoo {
     background: url(../../assets/img/zoo.svg), #FFFFFF;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    @media screen and (max-width: 600px) {
+      margin-top: 5px;
+    }
+    
   }
   &-dish {
     background: url(../../assets/img/monkey.svg), #FFFFFF;
     background-repeat: no-repeat;
     background-position: center;
+    @media screen and (max-width: 600px) {
+      margin-bottom: 11px;
+    }
   }
 
   &-descript {
@@ -825,9 +845,18 @@ $font-color5: #FFFFFF;
     display: block;
   }
   @media screen and (max-width: 600px) {
-    transform: rotate(86deg);
-    top: 189px
+    transform: rotate(85deg);
+    top: 189px;
+    right: -63px;
   }  
+}
+
+.how-it-work-action-zoo::before {
+  @media screen and (max-width: 600px) {
+    transform: rotate(86deg);
+    top: 197px;
+    right: -64px;
+  } 
 }
 
 .testimonials {
@@ -846,7 +875,7 @@ $font-color5: #FFFFFF;
     padding-bottom: 80px;
     flex-direction: column;
     background-size: 21%;
-    background-position: calc(100% + 13px) 122%;
+    background-position: calc(100% + 13px) 122%;    
   }
   @media screen and (max-width: 600px) {
     background: url("../../assets/img/leav_foto.png");
@@ -891,21 +920,27 @@ $font-color5: #FFFFFF;
       margin-bottom: 28px;
     }
     @media screen and (max-width: 768px){
-      font-size: 24px;
+      font-size: 36px;
     }
     @media screen and (max-width: 600px) {
+      font-size: 36px;
       margin-top: -32px;
       margin-bottom: 19px;   
     }
   }
 
   & .button-pets{
+    @media screen and (max-width: 1280px){
+      margin: 0 0;
+    }
+    
     @media screen and (max-width: 768px){
       margin-top: 41px;
       width: 240px;
     }
     @media screen and (max-width: 600px){
       margin-top: 30px;
+
     }
   }
 }
@@ -1025,16 +1060,14 @@ $font-color5: #FFFFFF;
       display: block;
       position: absolute;
       display: flex;
-      // margin-left: 33px;
       font-weight: 400;
-      // margin-right: 33px;
     }
     @media screen and (max-width: 600px) {
       position: static;
       display: flex;
-      padding: 0 19px;
+      padding: 0 19px 0 32px;
       gap: 30px;
-      justify-content: space-evenly;        
+      justify-content: space-evenly;
     }
   }
 
@@ -1068,9 +1101,10 @@ $font-color5: #FFFFFF;
 
 .subscribe {
   @media screen and (max-width:1280px) {
-    margin-right: 31px;
+    margin-right: 0;
   }
   @media screen and (max-width: 768px) {
+    margin-right: 31px;
     display: none;
   }
 
@@ -1262,6 +1296,7 @@ input[type=range].styled-slider {
   display: block;
   @media screen and (max-width: 1280px) {
     margin: 21px auto 52px;
+    width: 387px;
   }
   @media screen and (max-width: 768px) {
     display: none;
