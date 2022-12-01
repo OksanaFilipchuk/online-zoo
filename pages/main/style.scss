@@ -36,6 +36,9 @@ $font-color5: #FFFFFF;
   }
   @media screen and (max-width: 768px){
     min-height: 373px;
+    background-position-x: 0;
+  }
+  @media screen and (max-width: 640px){ 
     background-position-x: -63px;
   }
   @media screen and (max-width: 600px){
@@ -104,11 +107,11 @@ $font-color5: #FFFFFF;
   @media screen and (max-width:1280px){
     position: relative;
     z-index: 10;
-  }
+    }
   @media screen and (max-width: 768px) {
     position: fixed;
     width: 100%;
-  }  
+    }  
 
   &-container{
     display: flex;
@@ -189,14 +192,14 @@ $font-color5: #FFFFFF;
   background-position: 8px 24.6px;
   margin-right: 63px;
   @media screen and (max-width: 768px) {
-      font-size: 12.2899px;
-      border: none;
-      background-size: 9%;
-      background-position: 22px 14.6px;
-      line-height: 110%;
-      height: auto;
-      margin-left: -17px;
-    }
+    font-size: 12.2899px;
+    border: none;
+    background-size: 9%;
+    background-position: 22px 14.6px;
+    line-height: 110%;
+    height: auto;
+    margin-left: -17px;
+  }
 }
 
 .designed {
@@ -217,8 +220,6 @@ $font-color5: #FFFFFF;
   margin: 0 auto;
 
   @media screen and (max-width: 1280px){
-    // padding-left: 30px;
-    // padding-right: 30px;
     max-width: 940px;
   }
 
@@ -226,6 +227,7 @@ $font-color5: #FFFFFF;
     padding-left: 20px;
     padding-right: 20px;
   }
+
   @media screen and (max-width: 600px){
     padding-left: 10px;
     padding-right: 10px;
@@ -298,18 +300,21 @@ $font-color5: #FFFFFF;
   top: 0;
   left: -74px;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+
   @media screen and(max-width: 1280px){
     width: 367px;
     height: 367px;
     top: -23px;
     left: -13px;
   }
+
   @media screen and(max-width: 768px){
     width: 237px;
     height: 237px;
     top: 33px;
     left: -35px;
   }
+
   @media screen and(max-width: 600px){
     width: 119px;
     height: 119px;
@@ -328,7 +333,7 @@ $font-color5: #FFFFFF;
     padding-top: 100px;
     padding-bottom: 142px;
     background-image: none;
-  }
+    }
   @media screen and (max-width: 768px) {
     padding-top: 61px;
     background-image: url(../../assets/img/flower_foto1.jpg);
@@ -336,7 +341,7 @@ $font-color5: #FFFFFF;
     background-repeat: no-repeat;
     background-size: 26%;
     padding-bottom: 80px;
-  }
+    }
   @media screen and (max-width: 600px) {    
     padding-bottom: 40px;
     background-position: 116% 43px;
@@ -490,9 +495,9 @@ $font-color5: #FFFFFF;
       background: linear-gradient(113.96deg, #4B9200 1.49%, #4B9200 101.44%);
     }
   
-  }
-  
+  }  
 }
+
 .carousel-wrapper{
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -501,8 +506,7 @@ $font-color5: #FFFFFF;
   }
   @media screen and (max-width: 600px) {
     height: 1388px;
-  }
-  
+  }  
 }
 
 .pet-cards {
@@ -512,6 +516,7 @@ $font-color5: #FFFFFF;
   flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 20px;
+  
   @media screen and (max-width: 1280px) {
     row-gap: 92px;
     column-gap: 27px;
@@ -753,7 +758,7 @@ $font-color5: #FFFFFF;
   }
 }
 
-.how-it-work-block{
+.how-it-work-block {
   display: flex;
   justify-content: center;
   gap: 30.5px;
@@ -1014,33 +1019,6 @@ $font-color5: #FFFFFF;
 .footer {
   background-color: #111115;;
   padding-bottom: 50px;
-  @media screen and (max-width: 768px) {
-    padding-bottom: 0;
-    min-height: 252px;
-  }
-
-  &-line1 {
-    display: flex;
-    padding: 41px 0 36px;
-    justify-content: space-between;
-  }
-
-  &-line2 {
-    display: flex;
-    margin-top: 44px;
-    justify-content: space-between;
-    align-items: flex-end
-  }
-
-  &-container {
-    @media screen and (max-width: 768px) {
-    padding: 15px 20px 20px;
-    }
-  }
-}
-.footer {
-  background-color: #111115;;
-  padding-bottom: 50px;
   position: relative;
   @media screen and (max-width: 768px) {
     padding-bottom: 0;
@@ -1294,14 +1272,6 @@ $font-color5: #FFFFFF;
       justify-content: space-evenly;        
     }
 }
-// .footer-nav-list .nav-list-item{
-//   @media screen and (max-width: 1280px) {
-//       margin-right: 0;
-//     }
-//     @media screen and (max-width: 768px) {
-//       margin-right: 36px;
-//     }
-// }
 
 input[type=range].styled-slider {  
   -webkit-appearance: none;
@@ -1341,17 +1311,19 @@ input[type=range].styled-slider::-webkit-slider-runnable-track {
   box-shadow: none;
 }
 
-.burger-button {
-  display: none;
-  @media screen and (max-width: 768px){
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 19px;
-    height: 11px;
-    top: 0px;
-    left: 0px;
-  }
+.burger {
+  &-button {
+    display: none;
+    @media screen and (max-width: 768px){
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 19px;
+      height: 11px;
+      top: 0px;
+      left: 0px;
+    }
+  }  
 }
 
 .burger-line1,
