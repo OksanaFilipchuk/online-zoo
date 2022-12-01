@@ -27,6 +27,11 @@ a {
 @media screen and (max-width: 768px) {
   .first-block {
     min-height: 373px;
+    background-position-x: 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .first-block {
     background-position-x: -63px;
   }
 }
@@ -1211,33 +1216,6 @@ a {
     margin-left: 5px;
     margin-top: 12px;
     line-height: 120%;
-  }
-}
-
-.footer {
-  background-color: #111115;
-  padding-bottom: 50px;
-}
-@media screen and (max-width: 768px) {
-  .footer {
-    padding-bottom: 0;
-    min-height: 252px;
-  }
-}
-.footer-line1 {
-  display: flex;
-  padding: 41px 0 36px;
-  justify-content: space-between;
-}
-.footer-line2 {
-  display: flex;
-  margin-top: 44px;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-@media screen and (max-width: 768px) {
-  .footer-container {
-    padding: 15px 20px 20px;
   }
 }
 
