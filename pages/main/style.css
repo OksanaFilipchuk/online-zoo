@@ -18,7 +18,7 @@ a {
   min-height: 780px;
   position: relative;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1000px) {
   .first-block {
     min-height: 584px;
     background-position-x: -100px;
@@ -66,7 +66,7 @@ a {
   .first-block-header {
     width: 255px;
     height: 204px;
-    top: 37px;
+    top: 70px;
     right: -4px;
     font-size: 54.3px;
   }
@@ -75,7 +75,7 @@ a {
   .first-block-header {
     width: 128.13px;
     height: 102px;
-    top: 28px;
+    top: 63px;
     right: 0;
     font-size: 28px;
   }
@@ -342,7 +342,7 @@ a {
   .circle {
     width: 237px;
     height: 237px;
-    top: -1px;
+    top: 33px;
     left: -35px;
   }
 }
@@ -350,7 +350,7 @@ a {
   .circle {
     width: 119px;
     height: 119px;
-    top: 11px;
+    top: 44px;
     left: -20px;
   }
 }
