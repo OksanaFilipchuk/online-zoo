@@ -14,3 +14,32 @@ document.querySelectorAll(".amount-input").forEach((el) => {
     }
   })  
 })
+
+// burger
+function changeMenuToBurger() {
+  document.querySelector(".burger-background").classList.toggle("burger-active");
+  document.body.classList.toggle("hidden");
+  document.querySelector(".burger-button").classList.toggle("burger-button-active");
+  document.querySelector(".burger-line1").classList.toggle("burger-button-line1-active");
+  document.querySelector(".burger-line2").classList.toggle("burger-button-line2-active");
+  document.querySelector(".burger-line3").classList.toggle("burger-button-line3-active");
+}
+let burgerButton = document.querySelector(".burger-button");
+burgerButton.addEventListener("click", () =>{
+  changeMenuToBurger();
+  if(!Boolean(document.querySelector(".burger-designed"))){
+    let designedBurger = document.createElement("span");
+    designedBurger.innerHTML = `<a href = 'https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks' 
+                                  class='nav-list-item-link burger-item burger-designed'
+                                  target="_blank">
+                                  Designed by ©
+                                </a>`;
+    document.querySelector(".burger-nav-list").appendChild(designedBurger)
+  }
+  return
+})
+window.addEventListener("click", (e)=>{
+  if(e.target === document.querySelector(".burger-background")){
+    changeMenuToBurger();
+  }
+})

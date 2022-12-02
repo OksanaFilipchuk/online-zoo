@@ -7,6 +7,10 @@
   font-style: normal;
 }
 
+.hidden {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -131,15 +135,20 @@ $font-color5: #FFFFFF;
 
   &-list{
     display: flex;
-    @media screen and (max-width: 768px ) {
-      display: none;
+    // @media screen and (max-width: 768px ) {
+    //   display: none;
+    // }
+    @media screen and (max-width: 768px){
+      flex-direction: column;
+      gap: 14px;
+      // color: #333B41;
     }
   }
 
   &-list-item {
     list-style: none;
     margin-right: 58px;
-    &:last-child{
+    &:last-child {
       @media screen and (max-width: 1280px){
         margin-right: 0;
       }
@@ -150,12 +159,13 @@ $font-color5: #FFFFFF;
         margin-right: 0;
       }
     }
+
     @media screen and (max-width: 1280px){
-      margin-top: auto;
+      // margin-top: auto;
       margin-right: 48px;
     }
     @media screen and (max-width: 768px) {
-      margin-right: 36px;
+      margin-right: 36px;      
     }
     @media screen and (max-width: 600px) {
       margin-right: 0;
@@ -168,6 +178,9 @@ $font-color5: #FFFFFF;
     @media screen and (max-width: 980px) {
       font-size: 16px;
     } 
+    @media screen and (max-width: 768px) {
+      color: #333B41;
+    }
 
     &:hover {
       color: $font-color2;
@@ -629,7 +642,7 @@ $font-color5: #FFFFFF;
     padding-top: 20px;
     padding-bottom: 21px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 600px) {
     padding: 20px 10px;
   } 
 
@@ -770,7 +783,7 @@ $font-color5: #FFFFFF;
     margin-bottom: 38px;
     margin-right: 23px;
     margin-left: 11px;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   @media screen and (max-width: 600px){
     flex-direction: column;
@@ -1037,12 +1050,13 @@ $font-color5: #FFFFFF;
   }
 
   &-nav {
+    
     @media screen and (max-width: 600px) {
       order: 2;
     }
   }
 
-  &-nav-list {
+  &-nav-list {    
     @media screen and (max-width: 1280px) {
       margin-left: 44px;
     }
@@ -1053,8 +1067,11 @@ $font-color5: #FFFFFF;
       display: block;
       position: absolute;
       display: flex;
-      font-weight: 400;
+      font-weight: 400;      
+      flex-direction: row;
+      gap: 0;
     }
+      
     @media screen and (max-width: 600px) {
       position: static;
       display: flex;
@@ -1246,31 +1263,42 @@ $font-color5: #FFFFFF;
   }
 }
 
-.footer-nav-list-item-link{
-  @include fontProperty(400, 16px, 140%, $font-color5)
-}
 .footer-nav-list{
   @media screen and (max-width: 1280px) {
-      justify-content: space-between;
-      width: 332px;
-      margin-left: -35px;
-    }
+    justify-content: space-between;
+    width: 332px;
+    margin-left: -35px;
+  }
+  @media screen and (max-width: 768px) {
+    display: block;
+    left: 21px;
+    bottom: 18px;
+    display: block;
+    position: absolute;
+    display: flex;
+    margin-left: 0;
+  }
+  @media screen and (max-width: 600px) {
+    position: static;
+    display: flex;
+    padding: 0 19px;
+    gap: 30px;
+    justify-content: space-evenly;        
+  }  
+
+  &-item-link{
+    @include fontProperty(400, 16px, 140%, $font-color5)
+  }
+
+  & .nav-list-item-link {
     @media screen and (max-width: 768px) {
-      display: block;
-      left: 21px;
-      bottom: 18px;
-      display: block;
-      position: absolute;
-      display: flex;
-      margin-left: 0;
+      color: $font-color5;
+      font-weight: 400;    
     }
-    @media screen and (max-width: 600px) {
-      position: static;
-      display: flex;
-      padding: 0 19px;
-      gap: 30px;
-      justify-content: space-evenly;        
+    &-active {
+      color: $font-color2;
     }
+  }
 }
 
 input[type=range].styled-slider {  
@@ -1311,6 +1339,15 @@ input[type=range].styled-slider::-webkit-slider-runnable-track {
   box-shadow: none;
 }
 
+.burger-line1,
+.burger-line2,
+.burger-line3 {
+  width: 100%;
+  height: 2px;
+  background-color: #fcfafa;
+  transition: 200ms ease-in-out;
+}
+
 .burger {
   &-button {
     display: none;
@@ -1322,17 +1359,77 @@ input[type=range].styled-slider::-webkit-slider-runnable-track {
       height: 11px;
       top: 0px;
       left: 0px;
+      z-index: 2;
     }
-  }  
+    
+    &-line1-active {
+      background-color: #333B41;
+      transform: rotate(45deg);
+      margin-top: 8px;
+
+    }
+    &-line2-active {
+      background-color: #333B41;
+      display: none;
+    }
+    &-line3-active {
+      background-color: #333B41;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &-background {
+    transition: 300ms ease-in-out;
+    background-color: transparent;
+    @media screen and (max-width: 768px ) {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      right: -100%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }    
+  }
+  
+  &-active {
+    right: 0;
+    top: 0;
+  }
+  
+  &-nav-list {
+    @media screen and (max-width: 768px ) {
+      margin: 0 0 0 auto;
+      padding: 20px;
+      background-color: #FFFFFF;
+      max-width: 640px;
+      height: 100%;
+      gap: 15px;
+    }
+    @media screen and (max-width: 768px ) {      
+      height: auto;
+    }
+  }
+
+  &-item {
+    margin: 0;
+  }
+
+  &-logo {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin: 0;
+      color: #FE9013;
+      border: 0.950725px solid #FE9013;
+    }
+  }
+
+  &-designed {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
 }
 
-.burger-line1,
-.burger-line2,
-.burger-line3 {
-  width: 100%;
-  height: 2px;
-  background-color: #fcfafa;;;
-}
 
 .footer-petStory-logo {
   @media screen and (max-width: 768px) {
@@ -1340,7 +1437,7 @@ input[type=range].styled-slider::-webkit-slider-runnable-track {
     margin-right: 0;
     margin-left: 0;
     background-position: 12px 26.6px;
-    background-size: 14%;
+    background-size: 9%;
     font-weight: 400;
     font-size: 19.0145px;
     line-height: 120%;
