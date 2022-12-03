@@ -557,6 +557,11 @@ a {
     left: 243px;
   }
 }
+@media screen and (max-width: 636px) {
+  .pets-carousel-button-left {
+    display: none;
+  }
+}
 @media screen and (max-width: 1280px) {
   .pets-carousel-button-right {
     position: absolute;
@@ -564,10 +569,15 @@ a {
     right: 350px;
   }
 }
-@media screen and (max-width: 1280px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .pets-carousel-button-right {
     top: 342px;
     right: 243px;
+  }
+}
+@media screen and (max-width: 636px) {
+  .pets-carousel-button-right {
+    display: none;
   }
 }
 .pets-carousel-button:hover {
@@ -577,6 +587,9 @@ a {
   background: linear-gradient(113.96deg, #4B9200 1.49%, #4B9200 101.44%);
 }
 
+.carousel-wrapper {
+  margin: 0 0;
+}
 @media screen and (max-width: 768px) {
   .carousel-wrapper {
     width: 100%;
@@ -598,17 +611,21 @@ a {
   -moz-column-gap: 30px;
        column-gap: 30px;
   row-gap: 20px;
+  height: 882px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1280px) {
   .pet-cards {
     row-gap: 92px;
     -moz-column-gap: 27px;
          column-gap: 27px;
+    height: 882px;
   }
 }
 @media screen and (max-width: 600px) {
   .pet-cards {
     row-gap: 20px;
+    height: 1388px;
   }
 }
 
@@ -623,6 +640,7 @@ a {
   flex-wrap: wrap;
   overflow: hidden;
   position: relative;
+  transition: 2000ms ease-in-out;
 }
 @media screen and (max-width: 1280px) {
   .pet-card {
@@ -1227,6 +1245,9 @@ a {
     line-height: 120%;
   }
 }
+.testimonial-content-full {
+  -webkit-line-clamp: 13;
+}
 
 .footer {
   background-color: #111115;
@@ -1687,4 +1708,38 @@ input[type=range].styled-slider::-webkit-slider-runnable-track {
     color: #FFFFFF;
     border: none;
   }
+}
+
+.pop-up-background {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 12;
+}
+.pop-up-testimonial {
+  position: relative;
+  margin: 50px auto 0;
+  width: 297px;
+  height: 361px;
+  overflow: unset;
+}
+.pop-up-close-button {
+  display: none;
+}
+.pop-up-close-button-visible {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url(/assets/img/x_icon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: -14px;
+  right: -24px;
+  z-index: 13;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
