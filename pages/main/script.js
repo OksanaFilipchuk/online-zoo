@@ -3,17 +3,12 @@ let petsData = [];
 
 function formPetsData(data) {
   data.forEach(el => petsData.push(el));  
-  showCards()
+  appendCardsBlocks()
 }
 
-function showCards(){
-  petsToShow.clear();
-  while(petsToShow.size < 7){
-    let randomNumber = Math.floor(Math.random()*7)
-    petsToShow.add(petsData[randomNumber])
-  }
-  let petCards = document.querySelector(".pet-cards");
-  petCards.innerHTML = "";
+function formPetCards(){
+  let petCards = document.createElement("div");
+  petCards.classList = "pet-cards";
   petsToShow.forEach(el => {
     let petCard = document.createElement("div");
     petCard.classList.add("pet-card");
@@ -35,20 +30,38 @@ function showCards(){
     meal.classList.add("pet-card-meal")
     meal.setAttribute("src", el.meal);
     meal.setAttribute("alt", "meal");
-    petCard.appendChild(meal);
-    petCards.appendChild(petCard);
+    petCard.appendChild(meal);    
 
     petCard.addEventListener("mouseenter", event=>{
         event.target.children[1].classList.add("pet-card-content-active");
         event.target.children[0].classList.add("pet-card-img-active");
       })
 
-      petCard.addEventListener("mouseleave", event=>{
-        event.target.children[1].classList.remove("pet-card-content-active");
-        event.target.children[0].classList.remove("pet-card-img-active");
-      })
-
+    petCard.addEventListener("mouseleave", event=>{
+      event.target.children[1].classList.remove("pet-card-content-active");
+      event.target.children[0].classList.remove("pet-card-img-active");
     })
+
+    petCards.appendChild(petCard);
+
+  })
+  return petCards
+}
+
+function shuffleCards(){
+  petsToShow.clear();
+  while(petsToShow.size < 7){
+    let randomNumber = Math.floor(Math.random()*7)
+    petsToShow.add(petsData[randomNumber])
+  }
+}
+function appendCardsBlocks(){
+  shuffleCards();
+  document.querySelector(".carousel-wrapper").appendChild(formPetCards())
+}
+function prependCardsBlocks(){
+  shuffleCards();
+  document.querySelector(".carousel-wrapper").prependChild(formPetCards())
 }
 
 function showTestimonials(data){
@@ -140,23 +153,6 @@ window.addEventListener("click", (e)=>{
   }
 })
 
-//pet-carousel
-// document.querySelectorAll(".pets-carousel-button").forEach(el => {
-//   el.addEventListener("click", showCards)
-// })
-document.querySelectorAll(".pets-carousel-button").forEach(el => {
-  el.addEventListener("click", ()=>{
-    let set = new Set();
-    while(set.size < 7){
-      set.add(Math.floor(Math.random()*7))
-    }
-    document.querySelectorAll(".pet-card").forEach((el, index) => {
-      el.style.order = Array.from(set)[index]
-    })
-  })
-})
-
-
 // pop-up
 function showPopUp(event) {
   if(window.innerWidth <= 768){
@@ -174,3 +170,24 @@ function closePopUp(e){
   e.currentTarget.previousSibling.classList.remove("testimonial-content-full");
   e.stopPropagation()
 }
+
+//pet-carousel
+// document.querySelectorAll(".pets-carousel-button").forEach(el => {
+//   el.addEventListener("click", showCards)
+// })
+
+// document.querySelectorAll(".pets-carousel-button").forEach(el => {
+//   el.addEventListener("click", ()=>{
+//     let set = new Set();
+//     while(set.size < 7){
+//       set.add(Math.floor(Math.random()*7))
+//     }
+//     document.querySelectorAll(".pet-card").forEach((el, index) => {
+//       el.style.order = Array.from(set)[index]
+//     })
+//   })
+// })
+function moveRight(){
+  document.querySelector(".carousel-wrapper").prepend(formPetCards())
+}
+document.querySelector(".pets-carousel-button-left").addEventListener("click", moveRight);

@@ -371,8 +371,10 @@ $font-color5: #FFFFFF;
   }
 
   &-content {
+    max-height: 427px;
+    overflow: hidden;
     @media screen and (max-width: 768px ) {
-    width: 495px;
+      width: 495px;
     }
   }
 
@@ -460,7 +462,10 @@ $font-color5: #FFFFFF;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  position: relative;  
+  position: relative;
+  @media screen and (max-width: 1322px) {
+    gap: 0px;
+  }
 
   &-button {
     width: 62px;
@@ -520,34 +525,51 @@ $font-color5: #FFFFFF;
 
 .carousel-wrapper{
   margin: 0 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  height: 882px;
+  // @media screen and (max-width: 1280px) {
+  //   height: 882px;
+  // }
   @media screen and (max-width: 768px) {
     width: 100%;
     height: 756px;
     overflow: hidden;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 636px) {
     height: 1388px;
   }  
 }
 
 .pet-cards {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  margin: 0;
+  margin: 0 auto;
   flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 20px;
-  height: 882px;
+  flex: none;
   overflow: hidden;
-  
+  width: 1158px;
+    
   @media screen and (max-width: 1280px) {
     row-gap: 92px;
     column-gap: 27px;
-    height: 882px;
+    width: 885px;
+  @media screen and (max-width: 768px) {
+      width: 600px;
   }
-  @media screen and (max-width: 600px) {
-    row-gap: 20px;
-    height: 1388px;
+  }
+  @media screen and (max-width: 636px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    row-gap: 20px;        
+    // max-width: 616px;
+    // height: 1388px;
   }
 }
 
@@ -558,11 +580,14 @@ $font-color5: #FFFFFF;
   border-radius: 5px;
   overflow: hidden;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   overflow: hidden;
   position: relative;
-  transition: 2000ms ease-in-out;
+  transition: 200ms ease-in-out;
+  flex: none;
+  
   @media screen and (max-width: 1280px) {
     width: 295px;
     height: 354px;

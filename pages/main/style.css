@@ -409,6 +409,10 @@ a {
     gap: 31px;
   }
 }
+.backstage-content {
+  max-height: 427px;
+  overflow: hidden;
+}
 @media screen and (max-width: 768px) {
   .backstage-content {
     width: 495px;
@@ -526,6 +530,11 @@ a {
   gap: 20px;
   position: relative;
 }
+@media screen and (max-width: 1322px) {
+  .pets-carousel {
+    gap: 0px;
+  }
+}
 .pets-carousel-button {
   width: 62px;
   height: 62px;
@@ -589,6 +598,10 @@ a {
 
 .carousel-wrapper {
   margin: 0 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  height: 882px;
 }
 @media screen and (max-width: 768px) {
   .carousel-wrapper {
@@ -597,7 +610,7 @@ a {
     overflow: hidden;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 636px) {
   .carousel-wrapper {
     height: 1388px;
   }
@@ -605,27 +618,37 @@ a {
 
 .pet-cards {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  margin: 0;
+  margin: 0 auto;
   flex-wrap: wrap;
   -moz-column-gap: 30px;
        column-gap: 30px;
   row-gap: 20px;
-  height: 882px;
+  flex: none;
   overflow: hidden;
+  width: 1158px;
 }
 @media screen and (max-width: 1280px) {
   .pet-cards {
     row-gap: 92px;
     -moz-column-gap: 27px;
          column-gap: 27px;
-    height: 882px;
+    width: 885px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1280px) and (max-width: 768px) {
   .pet-cards {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 636px) {
+  .pet-cards {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
     row-gap: 20px;
-    height: 1388px;
   }
 }
 
@@ -636,11 +659,13 @@ a {
   border-radius: 5px;
   overflow: hidden;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   overflow: hidden;
   position: relative;
-  transition: 2000ms ease-in-out;
+  transition: 200ms ease-in-out;
+  flex: none;
 }
 @media screen and (max-width: 1280px) {
   .pet-card {
