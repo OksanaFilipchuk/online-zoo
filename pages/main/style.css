@@ -1011,7 +1011,7 @@ a {
   position: absolute;
   top: -17px;
   right: -59px;
-  background-image: url(/assets/img/green-arrow.png);
+  background-image: url(../../assets/img/green-arrow.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 90px;
