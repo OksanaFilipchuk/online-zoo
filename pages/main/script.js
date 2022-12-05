@@ -57,7 +57,11 @@ function shuffleCards(){
 }
 function appendCardsBlocks(){
   shuffleCards();
-  document.querySelector(".carousel-wrapper").appendChild(formPetCards())
+  document.querySelector(".carousel-wrapper").appendChild(formPetCards());
+  shuffleCards();
+  document.querySelector(".carousel-wrapper").appendChild(formPetCards());
+  shuffleCards();
+  document.querySelector(".carousel-wrapper").appendChild(formPetCards());
 }
 function prependCardsBlocks(){
   shuffleCards();
@@ -188,6 +192,19 @@ function closePopUp(e){
 //   })
 // })
 function moveRight(){
-  document.querySelector(".carousel-wrapper").prepend(formPetCards())
+  document.querySelector(".carousel-wrapper").children[1].style.left = "100%";
+  document.querySelector(".carousel-wrapper").children[0].style.left = "0";
+  shuffleCards();
+  document.querySelector(".carousel-wrapper").children[2].remove()
+  document.querySelector(".carousel-wrapper").prepend(formPetCards());
 }
 document.querySelector(".pets-carousel-button-left").addEventListener("click", moveRight);
+
+function moveLeft(){
+  document.querySelector(".carousel-wrapper").children[1].style.left = "-100%";
+  document.querySelector(".carousel-wrapper").children[2].style.left = "0";
+  shuffleCards();
+  document.querySelector(".carousel-wrapper").children[0].remove()
+  document.querySelector(".carousel-wrapper").append(formPetCards());
+}
+document.querySelector(".pets-carousel-button-right").addEventListener("click", moveLeft);

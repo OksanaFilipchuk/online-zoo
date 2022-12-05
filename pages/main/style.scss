@@ -135,13 +135,9 @@ $font-color5: #FFFFFF;
 
   &-list{
     display: flex;
-    // @media screen and (max-width: 768px ) {
-    //   display: none;
-    // }
     @media screen and (max-width: 768px){
       flex-direction: column;
       gap: 14px;
-      // color: #333B41;
     }
   }
 
@@ -161,7 +157,6 @@ $font-color5: #FFFFFF;
     }
 
     @media screen and (max-width: 1280px){
-      // margin-top: auto;
       margin-right: 48px;
     }
     @media screen and (max-width: 768px) {
@@ -478,7 +473,8 @@ $font-color5: #FFFFFF;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all ease-in-out 200ms;  
+    transition: all ease-in-out 200ms;
+    z-index: 10; 
     @media screen and (max-width: 600px) {
       display: none;
     } 
@@ -486,11 +482,11 @@ $font-color5: #FFFFFF;
       @media screen and (max-width: 1280px) {
         position: absolute;
         top: 369px;
-        left: 350px;
+        left: 26%;        
       }
       @media screen and (max-width: 768px) {
         top: 342px;
-        left: 243px;
+        left: 38%;
       }
       @media screen and (max-width: 636px) {
         display: none;
@@ -500,11 +496,11 @@ $font-color5: #FFFFFF;
       @media screen and (max-width: 1280px) {
         position: absolute;
         top: 369px;
-        right: 350px;
+        right: 26%;
       }
       @media screen and (max-width: 768px) {
         top: 342px;
-        right: 243px;
+        right: 38%;
       }
       
       @media screen and (max-width: 636px) {
@@ -518,8 +514,7 @@ $font-color5: #FFFFFF;
 
     &:active {
       background: linear-gradient(113.96deg, #4B9200 1.49%, #4B9200 101.44%);
-    }
-  
+    }  
   }  
 }
 
@@ -529,9 +524,7 @@ $font-color5: #FFFFFF;
   display: flex;
   flex-direction: row;
   height: 882px;
-  // @media screen and (max-width: 1280px) {
-  //   height: 882px;
-  // }
+  position: relative;
   @media screen and (max-width: 768px) {
     width: 100%;
     height: 756px;
@@ -552,25 +545,32 @@ $font-color5: #FFFFFF;
   row-gap: 20px;
   flex: none;
   overflow: hidden;
-  width: 1158px;
-    
+  width: 100%;
+  transition: 2000ms ease-in-out;
+  position: absolute;
   @media screen and (max-width: 1280px) {
     row-gap: 92px;
     column-gap: 27px;
-    width: 885px;
+  }
   @media screen and (max-width: 768px) {
-      width: 600px;
-  }
-  }
+  }  
   @media screen and (max-width: 636px) {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: center;
-    row-gap: 20px;        
-    // max-width: 616px;
-    // height: 1388px;
+    row-gap: 20px;
   }
+}
+
+.pet-cards:nth-child(1) {
+  left: -100%;
+}
+.pet-cards:nth-child(2) {
+  left: 0;
+}
+.pet-cards:nth-child(3) {
+  left: 100%;
 }
 
 .pet-card {
@@ -772,8 +772,7 @@ $font-color5: #FFFFFF;
       @media screen and (max-width: 600px) {
         display: none;
       }
-    }
-    
+    }    
   }
 }
 
@@ -826,8 +825,7 @@ $font-color5: #FFFFFF;
   @media screen and (max-width: 600px){
     flex-direction: column;
     align-items: center;
-    gap: 35px;
-    
+    gap: 35px;    
   }  
 }
 
@@ -896,7 +894,7 @@ $font-color5: #FFFFFF;
   position: absolute;
   top: -17px;
   right: -59px;
-  background-image: url(/assets/img/green-arrow.png);
+  background-image: url(../../assets/img/green-arrow.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 90px;
@@ -1001,7 +999,6 @@ $font-color5: #FFFFFF;
     }
     @media screen and (max-width: 600px){
       margin-top: 30px;
-
     }
   }
 }
@@ -1470,7 +1467,6 @@ input[type=range].styled-slider::-webkit-slider-runnable-track {
     }
   }
 }
-
 
 .footer-petStory-logo {
   @media screen and (max-width: 768px) {

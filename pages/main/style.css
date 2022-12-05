@@ -547,6 +547,7 @@ a {
   justify-content: center;
   cursor: pointer;
   transition: all ease-in-out 200ms;
+  z-index: 10;
 }
 @media screen and (max-width: 600px) {
   .pets-carousel-button {
@@ -557,13 +558,13 @@ a {
   .pets-carousel-button-left {
     position: absolute;
     top: 369px;
-    left: 350px;
+    left: 26%;
   }
 }
 @media screen and (max-width: 768px) {
   .pets-carousel-button-left {
     top: 342px;
-    left: 243px;
+    left: 38%;
   }
 }
 @media screen and (max-width: 636px) {
@@ -575,13 +576,13 @@ a {
   .pets-carousel-button-right {
     position: absolute;
     top: 369px;
-    right: 350px;
+    right: 26%;
   }
 }
 @media screen and (max-width: 768px) {
   .pets-carousel-button-right {
     top: 342px;
-    right: 243px;
+    right: 38%;
   }
 }
 @media screen and (max-width: 636px) {
@@ -602,6 +603,7 @@ a {
   display: flex;
   flex-direction: row;
   height: 882px;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .carousel-wrapper {
@@ -627,19 +629,15 @@ a {
   row-gap: 20px;
   flex: none;
   overflow: hidden;
-  width: 1158px;
+  width: 100%;
+  transition: 2000ms ease-in-out;
+  position: absolute;
 }
 @media screen and (max-width: 1280px) {
   .pet-cards {
     row-gap: 92px;
     -moz-column-gap: 27px;
          column-gap: 27px;
-    width: 885px;
-  }
-}
-@media screen and (max-width: 1280px) and (max-width: 768px) {
-  .pet-cards {
-    width: 600px;
   }
 }
 @media screen and (max-width: 636px) {
@@ -650,6 +648,18 @@ a {
     align-items: center;
     row-gap: 20px;
   }
+}
+
+.pet-cards:nth-child(1) {
+  left: -100%;
+}
+
+.pet-cards:nth-child(2) {
+  left: 0;
+}
+
+.pet-cards:nth-child(3) {
+  left: 100%;
 }
 
 .pet-card {
@@ -1054,7 +1064,7 @@ a {
   position: absolute;
   top: -17px;
   right: -59px;
-  background-image: url(/assets/img/green-arrow.png);
+  background-image: url(../../assets/img/green-arrow.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 90px;
