@@ -1108,7 +1108,7 @@ a {
     background-size: 12.5em;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
   .testimonials {
     margin-top: 61px;
     padding-bottom: 80px;
@@ -1134,7 +1134,7 @@ a {
     max-width: 940px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
   .testimonials-carousel {
     max-height: 357px;
   }
@@ -1151,7 +1151,7 @@ a {
     width: 1585px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
   .testimonials-wrapper {
     flex-direction: column;
     gap: 15px;
@@ -1189,7 +1189,7 @@ a {
     margin: 0 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
   .testimonials .button-pets {
     margin: 41px auto 0;
     width: 240px;
@@ -1217,7 +1217,7 @@ a {
     padding: 12px 17px 12px 13px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
   .testimonial {
     width: calc(100vw - 40px);
     height: 109px;
@@ -1262,7 +1262,7 @@ a {
     margin-top: 15px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
   .testimonial-content {
     overflow: hidden;
     display: -webkit-box;
@@ -1595,6 +1595,11 @@ input[type=range].styled-slider {
   }
 }
 @media screen and (max-width: 768px) {
+  input[type=range].styled-slider {
+    display: none;
+  }
+}
+@media screen and (max-width: 999px) {
   input[type=range].styled-slider {
     display: none;
   }

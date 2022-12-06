@@ -208,3 +208,4 @@ function moveLeft(){
   document.querySelector(".carousel-wrapper").append(formPetCards());
 }
 document.querySelector(".pets-carousel-button-right").addEventListener("click", moveLeft);
+alert("Please, review my work after Friday. Thank You!")
