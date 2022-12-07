@@ -1,20 +1,3 @@
-document.querySelectorAll(".nav-list-item-link").forEach(el=>
-    el.addEventListener("click", function(){
-      document.querySelectorAll(".nav-list-item-link-active").forEach(el=>{
-        el.classList.remove("nav-list-item-link-active")});    
-    }))
-
-document.querySelectorAll(".amount-input").forEach((el) => {
-  el.addEventListener("change", (e)=>{
-    if(e.target.checked){
-      for(let el of e.target.labels[0].parentNode.children){
-        el.classList.remove("amount-values-active")
-      }
-      e.target.labels[0].classList.add("amount-values-active");
-    }
-  })  
-})
-
 // burger
 function changeMenuToBurger() {
   document.querySelector(".burger-background").classList.toggle("burger-active");
@@ -41,5 +24,35 @@ burgerButton.addEventListener("click", () =>{
 window.addEventListener("click", (e)=>{
   if(e.target === document.querySelector(".burger-background")){
     changeMenuToBurger();
+  }
+})
+
+// amount-bar
+document.querySelectorAll(".amount-input").forEach((el) => {
+  el.addEventListener("input", (e)=>{
+    document.querySelector(".another-amount").value =  e.target.value;
+    if(e.target.checked){
+      for(let el of e.target.labels[0].parentNode.children){
+        el.classList.remove("amount-values-active")
+      }
+      e.target.labels[0].classList.add("amount-values-active");
+    }
+  })  
+})
+
+document.querySelector(".another-amount").addEventListener("input", (e) => {
+  if(e.target.value.length > 4){
+    e.target.value = e.target.value.slice(0,4); 
+  }
+  let amounts = document.querySelectorAll(".amount-input");
+  let amountsValues = [];
+  amounts.forEach(el => {
+    amountsValues.push(el.value)
+  })
+  let index = amountsValues.indexOf(e.target.value);
+  if(index > -1){
+    amounts[index].checked = "true";
+    document.querySelector(".amount-values-active").classList.remove("amount-values-active");
+    document.querySelector(".amount-values").children[index].classList.add("amount-values-active")
   }
 })
