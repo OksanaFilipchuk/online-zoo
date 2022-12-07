@@ -63,14 +63,17 @@ function appendCardsBlocks(){
   shuffleCards();
   document.querySelector(".carousel-wrapper").appendChild(formPetCards());
 }
+
 function prependCardsBlocks(){
   shuffleCards();
   document.querySelector(".carousel-wrapper").prependChild(formPetCards())
 }
 
 function showTestimonials(data){
-  let testimonialsWrapper = document.querySelector(".testimonials-wrapper");  
-  data.forEach(el => {
+  let testimonialsWrapper = document.querySelector(".testimonials-wrapper");
+  
+  data.forEach((el, index) => {
+    if(index < 11){
     let testimonialBackground = document.createElement("div");
     testimonialBackground.classList.add("testimonial-background");
     let testimonialBlock = document.createElement("div");
@@ -99,18 +102,10 @@ function showTestimonials(data){
     testimonialBlock.appendChild(testimonialContent);
     testimonialBlock.appendChild(closeButton);
     testimonialsWrapper.appendChild(testimonialBackground);
+    }
   })
-
 }
 
-// document.querySelectorAll(".nav-list-item-link").forEach(el=>
-//   el.addEventListener("click", function(){
-//     document.querySelectorAll(".nav-list-item-link-active").forEach(el=>{
-//       el.classList.remove("nav-list-item-link-active")});    
-//   }))
-
-// window.addEventListener('DOMContentLoaded', showCards);
-// window.addEventListener('DOMContentLoaded', showTestimonials);
 fetch('pets.json')
 .then(response => {
 	return response.json();
@@ -176,21 +171,6 @@ function closePopUp(e){
 }
 
 //pet-carousel
-// document.querySelectorAll(".pets-carousel-button").forEach(el => {
-//   el.addEventListener("click", showCards)
-// })
-
-// document.querySelectorAll(".pets-carousel-button").forEach(el => {
-//   el.addEventListener("click", ()=>{
-//     let set = new Set();
-//     while(set.size < 7){
-//       set.add(Math.floor(Math.random()*7))
-//     }
-//     document.querySelectorAll(".pet-card").forEach((el, index) => {
-//       el.style.order = Array.from(set)[index]
-//     })
-//   })
-// })
 function moveRight(){
   document.querySelector(".carousel-wrapper").children[1].style.left = "100%";
   document.querySelector(".carousel-wrapper").children[0].style.left = "0";
@@ -208,4 +188,19 @@ function moveLeft(){
   document.querySelector(".carousel-wrapper").append(formPetCards());
 }
 document.querySelector(".pets-carousel-button-right").addEventListener("click", moveLeft);
+
+//testimonial carousel
+document.querySelector("input[type='range']").addEventListener("input", (event) => {
+  let wrapper = document.querySelector(".testimonials-wrapper");
+  let target = event.currentTarget;
+  let step = wrapper.children[0].offsetWidth + 30;
+  console.log(document.documentElement.clientWidth)
+  if(document.documentElement.clientWidth  > 1280){
+    document.querySelector("input[type='range']").setAttribute("max", "7")
+  }
+    wrapper.style.left = `${-target.value * step}px`;
+})
+
+
+
 alert("Please, review my work after Friday. Thank You!")
