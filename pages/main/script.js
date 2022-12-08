@@ -7,6 +7,7 @@ function formPetsData(data) {
 }
 
 function formPetCards(){
+  shuffleCards();
   let petCards = document.createElement("div");
   petCards.classList = "pet-cards";
   petsToShow.forEach(el => {
@@ -56,17 +57,9 @@ function shuffleCards(){
   }
 }
 function appendCardsBlocks(){
-  shuffleCards();
   document.querySelector(".carousel-wrapper").appendChild(formPetCards());
-  shuffleCards();
   document.querySelector(".carousel-wrapper").appendChild(formPetCards());
-  shuffleCards();
   document.querySelector(".carousel-wrapper").appendChild(formPetCards());
-}
-
-function prependCardsBlocks(){
-  shuffleCards();
-  document.querySelector(".carousel-wrapper").prependChild(formPetCards())
 }
 
 function showTestimonials(data){
@@ -172,20 +165,33 @@ function closePopUp(e){
 
 //pet-carousel
 function moveRight(){
+  document.querySelector(".pets-carousel-button-left").removeEventListener("click", moveRight);
   document.querySelector(".carousel-wrapper").children[1].style.left = "100%";
   document.querySelector(".carousel-wrapper").children[0].style.left = "0";
-  shuffleCards();
   document.querySelector(".carousel-wrapper").children[2].remove()
   document.querySelector(".carousel-wrapper").prepend(formPetCards());
+
+  setTimeout(()=>{
+    document.querySelector(".pets-carousel-button-left").addEventListener("click", moveRight);
+    document.querySelector(".carousel-wrapper").children[2].remove();
+    document.querySelector(".carousel-wrapper").append(formPetCards());
+  }, 1000)
 }
 document.querySelector(".pets-carousel-button-left").addEventListener("click", moveRight);
 
 function moveLeft(){
+  document.querySelector(".pets-carousel-button-right").removeEventListener("click", moveLeft);
+  
   document.querySelector(".carousel-wrapper").children[1].style.left = "-100%";
   document.querySelector(".carousel-wrapper").children[2].style.left = "0";
-  shuffleCards();
-  document.querySelector(".carousel-wrapper").children[0].remove()
+  document.querySelector(".carousel-wrapper").children[0].remove();  
   document.querySelector(".carousel-wrapper").append(formPetCards());
+
+  setTimeout(()=>{
+    document.querySelector(".carousel-wrapper").children[0].remove();  
+    document.querySelector(".carousel-wrapper").prepend(formPetCards());
+    document.querySelector(".pets-carousel-button-right").addEventListener("click", moveLeft);
+  }, 1000)
 }
 document.querySelector(".pets-carousel-button-right").addEventListener("click", moveLeft);
 
@@ -200,7 +206,3 @@ document.querySelector("input[type='range']").addEventListener("input", (event) 
   }
     wrapper.style.left = `${-target.value * step}px`;
 })
-
-
-
-alert("Please, review my work after Friday. Thank You!")
