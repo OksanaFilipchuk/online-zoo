@@ -93,7 +93,6 @@
         padding-left: 0;
       }
       @media screen and (max-width: 768px){
-        // display: none;
         flex-direction: column;
         gap: 14px;
       }
@@ -110,8 +109,7 @@
       }
       @media screen and (max-width: 600px) {
         margin-right: 0;
-      }
-      
+      }      
     }
   
     &-list-item-link {
@@ -232,8 +230,7 @@
       border-radius: 5px;
       @media screen and (max-width: 600px){
         margin: 57px auto 0;
-      }
-      
+      }      
     }
   }
   
@@ -495,9 +492,7 @@
         flex-direction: column;
         gap: 30px;
       }
-    }
-    
-  
+    }  
   }
   
   .subscribe { 
@@ -506,10 +501,7 @@
     } 
     &-header {
       @include fontProperty(400, 24px, 120%, $font-color5);
-      display: block;
-      @media screen and (max-width: 768px) {
-        // letter-spacing: 0.6px;
-      }
+      display: block;      
     }
   
     &-input {
@@ -733,7 +725,6 @@
           font-size: 40px;
         }
       }
-
     }
   }
 
@@ -899,7 +890,6 @@
     }
   }
 
-
   .another-amount {
     display: block;
     width: 268px;
@@ -965,13 +955,13 @@
     position: relative;
   }
 
-  .dollar {    
-    position: absolute;
-    left: calc(100%/2 + 115px);
-    top: 15px;
-    @media screen and (max-width: 768px){
-      left: calc(100%/2 + 72px);
-      top: 10px;
+.dollar {    
+  position: absolute;
+  left: calc(100%/2 + 115px);
+  top: 15px;
+  @media screen and (max-width: 768px){
+    left: calc(100%/2 + 72px);
+    top: 10px;
   }
 }
 
@@ -987,7 +977,6 @@
     left: 0px;
   }
 }
-
 
 .burger-line1,
 .burger-line2,
