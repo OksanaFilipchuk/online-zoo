@@ -206,7 +206,3 @@ document.querySelector("input[type='range']").addEventListener("input", (event) 
   }
     wrapper.style.left = `${-target.value * step}px`;
 })
-
-
-
-alert("Please, review my work after Friday. Thank You!")
