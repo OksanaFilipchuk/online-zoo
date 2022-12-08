@@ -200,7 +200,6 @@ document.querySelector("input[type='range']").addEventListener("input", (event) 
   let wrapper = document.querySelector(".testimonials-wrapper");
   let target = event.currentTarget;
   let step = wrapper.children[0].offsetWidth + 30;
-  console.log(document.documentElement.clientWidth)
   if(document.documentElement.clientWidth  > 1280){
     document.querySelector("input[type='range']").setAttribute("max", "7")
   }
