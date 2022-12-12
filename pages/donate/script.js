@@ -41,6 +41,8 @@ document.querySelectorAll(".amount-input").forEach((el) => {
 })
 
 document.querySelector(".another-amount").addEventListener("input", (e) => {
+  document.querySelector("#amount-25").classList.remove("amount-25-non-highlight")
+   
   if(e.target.value.length > 4){
     document.querySelectorAll(".amount-input-non-highlight").forEach(el => el.classList.remove("amount-input-non-highlight"))
     e.target.value = e.target.value.slice(0,4); 
@@ -67,6 +69,4 @@ document.querySelector(".another-amount").addEventListener("input", (e) => {
       document.querySelector(".amount-values-active").classList.remove("amount-values-active");
     }    
   }
-  console.log(index)
-
 })
