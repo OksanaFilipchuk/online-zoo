@@ -1232,4 +1232,10 @@ label[for=amount-1000] {
   .burger-designed {
     display: none;
   }
+}
+
+#amount-25.amount-25-non-highlight {
+  background: url(../../assets/img/Ellipse9.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */

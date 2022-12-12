@@ -106,8 +106,8 @@ $font-color5: #FFFFFF;
 }
 
 .header {
-  background-color: 
-  rgba(0, 0, 0, 1);
+  background-color:rgba(0, 0, 0, 1);
+  z-index: 11;
   @media screen and (max-width:1280px){
     position: relative;
     z-index: 11;
