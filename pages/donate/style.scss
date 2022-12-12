@@ -821,10 +821,10 @@
         background: url(../../assets/img/Ellipse9.svg), url(../../assets/img/roller_icon.svg);
         background-position: center center;
         background-repeat: no-repeat no-repeat;
-        @media screen and (max-width: 600px) {        
+        @media screen and (max-width: 600px) {    
           background-size: 13%, 20px 20px;
         }
-      }     
+      }    
   }
 
   .amount-values {
@@ -1067,4 +1067,10 @@
       display: none;
     }
   }
+}
+
+#amount-25.amount-25-non-highlight {
+  background: url(../../assets/img/Ellipse9.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
