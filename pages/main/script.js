@@ -140,8 +140,14 @@ burgerButton.addEventListener("click", () =>{
   return
 })
 window.addEventListener("click", (e)=>{
-  if(e.target === document.querySelector(".burger-background")){
+  if(e.target === document.querySelector(".burger-background") ){
     changeMenuToBurger();
+  }
+  if(e.target === document.querySelector(".pop-up-background") ){
+    document.querySelector(".pop-up-testimonial").classList.remove("pop-up-testimonial");
+    e.target.classList.remove("pop-up-background");
+    document.body.classList.remove("hidden");
+    document.querySelector(".testimonial-content-full").classList.remove("testimonial-content-full");
   }
 })
 
