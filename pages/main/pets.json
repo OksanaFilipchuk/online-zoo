@@ -1,4 +1,5 @@
-[{
+[
+  {
     "name": "giant pandas",
     "img": "../../assets/img/giant pandas.jpg",
     "native": "Native to Southwest China",
@@ -39,5 +40,5 @@
     "img": "../../assets/img/penguins.jpg",
     "native": "Native to Antarctica",
     "meal": "../../assets/logo/meet-fish_icon.svg"
-  } 
+  }
 ]
