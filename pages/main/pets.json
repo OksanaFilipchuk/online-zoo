@@ -1,0 +1,44 @@
+[
+  {
+    "name": "giant pandas",
+    "img": "../../assets/img/giant pandas.jpg",
+    "native": "Native to Southwest China",
+    "meal": "../../assets/logo/banana-bamboo_icon.svg"
+  },
+  {
+    "name": "eagles",
+    "img": "../../assets/img/eagles.jpg",
+    "native": "Native to South America",
+    "meal": "../../assets/logo/meet-fish_icon.svg"
+  },
+  {
+    "name": "cheetahs",
+    "img": "../../assets/img/cheetahs.jpg",
+    "native": "Native to Africa",
+    "meal": "../../assets/logo/meet-fish_icon.svg"
+  },
+  {
+    "name": "gorillas",
+    "img": "../../assets/img/gorillas.jpg",
+    "native": "Native to Congo",
+    "meal": "../../assets/logo/banana-bamboo_icon.svg"
+  },
+  {
+    "name": "two-toes sloth",
+    "img": "../../assets/img/two-toes.jpg",
+    "native": "Mesoamerica, South America",
+    "meal": "../../assets/logo/banana-bamboo_icon.svg"
+  },
+  {
+    "name": "alligators",
+    "img": "../../assets/img/aligators.jpg",
+    "native": "Native to Southeastern U. S.",
+    "meal": "../../assets/logo/meet-fish_icon.svg"
+  },
+  {
+    "name": "penguins",
+    "img": "../../assets/img/penguins.jpg",
+    "native": "Native to Antarctica",
+    "meal": "../../assets/logo/meet-fish_icon.svg"
+  }
+]
